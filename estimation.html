@@ -19,6 +19,8 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/font-awesome.firefox.css" rel="stylesheet">
     <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/select2.min.css" rel="stylesheet">
+
     <!-- JS -->
     <script src="js/jquery.min.js"></script>
   </head>
@@ -107,16 +109,59 @@
             <section class="pageSection">
                 <div class="col-xs-12">
                     <div class="sectionTitleArea">
-                        <h2 class="sectionTitle">Confiez-nous votre bien immobilier</h2>
+                        <!-- Title Block Model1 Version1-2 Starts -->
+                        <header id="main-header"  class="container header-section mar-top20">
+                            <div class="row section-bg">
+                                <div class="row-inner col-md-12 col-sm-12 col-xs-12 first-section-spacing">
+                                    <div class="col-sm-12 pad-left0 pad-right0">
+                                        <div class="title-block title-block-m1-v1-2 title-lg title-block-clr row-to-table-height text-center">
+                                            <div class="title-text-block text-center">
+                                                <h2 class="sectionTitle">Confiez-nous votre bien immobilier</h2>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.row-col -->
+                                </div><!-- /.row-inner -->
+                            </div><!-- /.row -->
+                        </header>
+                        <!-- Title Block Model1 Version1-2 Ends -->
                     </div>
-                    <p>Notre agence immobilière AGENCE MJB (Provence-Alpes-Côte d'Azur) propose déjà des biens immobiliers dans les villes de Aix En Provence, Marseille, Marseille 13eme, Puyricard, Chateau Gombert, Saint Cannat, Meyreuil, Cabries, Mallemort, Septemes Les Vallons, Saint Marc Jaumegarde, Lambesc, Meyrargues, Cucuron, Venelles, Vauvenargues, Marseille 7eme, Les Milles, Plan De Cuques, Ventabren, Marseille 5eme et dans bien d'autres villes, si vous souhaitez nous confier votre bien pour le vendre ou le louer, remplissez ce formulaire et nous vous contacterons pour une estimation gratuite et éventuellement sa prise en charge.<br><span class="requiredText">Les informations obligatoires sont indiquées avec un astérisque (*).</span>
-                    </p>
+                    <!-- Agency Model6 Starts -->
+                    <section id="agency" class="agency-m8 custom container marg-top18">
+                        <div class="row section-bg" >
+                            <div class=" col-sm-12 col-xs-12">
+                                <div class="row marg-btm-5 agency-block">
+                                    <!-- Agency Block Content Starts -->
+                                    <div class="col-lg-12 col-md-12 agency-block-content vtop text-justify ">
+                                        <p>Notre agence immobilière AGENCE MJB (Provence-Alpes-Côte d'Azur) propose déjà des biens immobiliers dans les villes de Aix En Provence, Marseille, Marseille 13eme, Puyricard, Chateau Gombert, Saint Cannat, Meyreuil, Cabries, Mallemort, Septemes Les Vallons, Saint Marc Jaumegarde, Lambesc, Meyrargues, Cucuron, Venelles, Vauvenargues, Marseille 7eme, Les Milles, Plan De Cuques, Ventabren, Marseille 5eme et dans bien d'autres villes, si vous souhaitez nous confier votre bien pour le vendre ou le louer, remplissez ce formulaire et nous vous contacterons pour une estimation gratuite et éventuellement sa prise en charge.<br><span class="requiredText">Les informations obligatoires sont indiquées avec un astérisque (*).</span>
+                                        </p>
+                                    </div>
+                                    <!-- Agency Block Content Ends -->
+                                </div><!--./row-col-->
+                            </div><!--./row-inner-->
+                        </div><!--./row-->
+                    </section>
+                    <!-- Agency Model6 Ends -->
+
                 </div>
                 <div class="formArea">
-                    <form class="form">
+                    <form class="form form-border-rect">
                         <div class="formSectionTitle">
                             <div class="sectionTitleArea formSectionTitleArea">
-                                <h3 class="sectionTitle">Informations personnelles</h3>
+                                <!-- Title Block Model1 Version1-2 Starts -->
+                                <header id="main-header"  class="container header-section mar-top20">
+                                    <div class="row section-bg">
+                                        <div class="row-inner col-md-12 col-sm-12 col-xs-12 first-section-spacing">
+                                            <div class="col-sm-12 pad-left0 pad-right0">
+                                                <div class="title-block title-block-m1-v1-2 title-lg title-block-clr row-to-table-height text-center">
+                                                    <div class="title-text-block text-center">
+                                                        <h2 class="sectionTitle">Informations personnelles</h2>
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.row-col -->
+                                        </div><!-- /.row-inner -->
+                                    </div><!-- /.row -->
+                                </header>
+                                <!-- Title Block Model1 Version1-2 Ends -->
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
@@ -128,8 +173,11 @@
                                     <option value="3">Sté</option>
                                 </select>
                             </div>
-                            <div class="col-xs-8 formItem">
+                            <div class="col-xs-8 formItem form-error-m1 form-error">
                                 <input class="form-control error" type="text" placeholder="Nom *">
+                                <div class="form-error-blck">
+                                    <a href="#" title="Vous devez indiquer votre adresse e-mail." data-placement="top"  class="error-btn" data-toggle="tooltip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                </div>
                             </div>
                             <div class="col-xs-12 formItem">
                                 <input class="form-control" type="text" placeholder="Prénom">
@@ -139,31 +187,57 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
-                            <div class="col-xs-12 formItem">
+                            <div class="col-xs-12 formItem form-error-m1 form-error">
                                 <input class="form-control" type="text" class="col-xs-12" placeholder="Téléphone *">
+                                <div class="form-error-blck">
+                                    <a href="#" title="Vous devez indiquer votre adresse e-mail." data-placement="top"  class="error-btn" data-toggle="tooltip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                </div>
                             </div>
-                            <div class="col-xs-12 formItem">
+                            <div class="col-xs-12 formItem form-error-m1 form-error">
                                 <input class="form-control" type="text" class="col-xs-12" placeholder="E-mail *">
+                                <div class="form-error-blck">
+                                    <a href="#" title="Vous devez indiquer votre adresse e-mail." data-placement="top"  class="error-btn" data-toggle="tooltip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                </div>
                             </div>
-                            <div class="col-xs-12 formItem">
+                            <div class="col-xs-12 formItem form-error-m1 form-error">
                                 <input class="form-control" type="text" class="col-xs-12" placeholder="Ville *">
+                                <div class="form-error-blck">
+                                    <a href="#" title="Vous devez indiquer votre adresse e-mail." data-placement="top"  class="error-btn" data-toggle="tooltip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                </div>
                             </div>
                         </div>
                         <div class="formSectionTitle">
                             <div class="sectionTitleArea formSectionTitleArea">
-                                <h3 class="sectionTitle">Informations générales</h3>
+                                <!-- Title Block Model1 Version1-2 Starts -->
+                                <header id="main-header"  class="container header-section mar-top20">
+                                    <div class="row section-bg">
+                                        <div class="row-inner col-md-12 col-sm-12 col-xs-12 first-section-spacing">
+                                            <div class="col-sm-12 pad-left0 pad-right0">
+                                                <div class="title-block title-block-m1-v1-2 title-lg title-block-clr row-to-table-height text-center">
+                                                    <div class="title-text-block text-center">
+                                                        <h2 class="sectionTitle">Informations générales</h2>
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.row-col -->
+                                        </div><!-- /.row-inner -->
+                                    </div><!-- /.row -->
+                                </header>
+                                <!-- Title Block Model1 Version1-2 Ends -->
                             </div>
                         </div>
                         <div class="col-xs-12">
-                            <div class="col-xs-12 formItem">
+                            <div class="col-xs-12 formItem form-error-m1 form-error">
                                 <select class="form-control">
                                     <option value="" selected hidden>Catégorie *</option>
                                     <option value="1">Vente</option>
                                     <option value="2">Location</option>
                                     <option value="3">Location saisonnière</option>
                                 </select>
+                                <div class="form-error-blck">
+                                    <a href="#" title="Vous devez indiquer votre adresse e-mail." data-placement="top"  class="error-btn" data-toggle="tooltip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                </div>
                             </div>
-                            <div class="col-xs-12 formItem">
+                            <div class="col-xs-12 formItem form-error-m1 form-error">
                                 <select class="form-control">
                                     <option value="" selected hidden>Type de bien *</option>
                                     <option value="1">Studios et T1</option>
@@ -184,19 +258,25 @@
                                     <option value="16">Chalets</option>
                                     <option value="17">Garages / Parkings</option>
                                 </select>
+                                <div class="form-error-blck">
+                                    <a href="#" title="Vous devez indiquer votre adresse e-mail." data-placement="top"  class="error-btn" data-toggle="tooltip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                </div>
                             </div>
-                            <div class="col-xs-12 formItem">
+                            <div class="col-xs-12 formItem form-error-m1 form-error">
                                 <select class="form-control">
                                     <option value="" selected hidden>Ville ou code postal*</option>
                                     <option value="1">Option 1</option>
                                     <option value="2">Option 2</option>
                                     <option value="3">Option 3</option>
                                 </select>
+                                <div class="form-error-blck">
+                                    <a href="#" title="Vous devez indiquer votre adresse e-mail." data-placement="top"  class="error-btn" data-toggle="tooltip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                </div>
                             </div>
                         </div>
                         <div class="formSectionTitle">
                             <div class="sectionTitleArea formSectionTitleArea">
-                                <h3 class="sectionTitle">Details</h3>
+                                <h3 class="sectionTitle">INFORMATIONS DÉTAILS</h3>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6">
@@ -240,71 +320,119 @@
                 </div>
             </section>
             <!-- /page section -->
+             <!-- Back Section Starts -->
+    <section class="container back-section">
+        <div class="row section-bg" >
+            <div class="row-inner col-sm-12 col-xs-12  marg-top20 marg-btm30 text-left ">
+                <div class="w-180 marg-btm-5 text-left">
+                     <a href="contact.html"><button type="button" class="button contactAgenceButton" name="button"> <i class="fa fa-chevron-left leftcaret"></i>Retour</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Back Section Ends -->
         </div>
     </div>
     <!-- /main content -->
+    <!-- Footer Section Model2 Starts -->
+    <footer id="footer" class="footer-m2 container-fluid">
 
-    <!-- footer -->
-    <footer>
-        <nav class="siteMap">
-            <div class="container">
+        <!-- Footer Top Links Block Starts -->
+        <div class=" text-center footer-top-links-bg">
+            <div class="row-inner col-md-10 col-sm-10 col-xs-12 footer-top-links footer-top-links-clr">
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="agency.html">Agence</a></li>
-                    <li><a href="listing.html">Vente</a></li>
-                    <li><a href="listing.html">Location</a></li>
-                    <li><a href="recherche.html">Recherche</a></li>
-                    <li><a href="#">Estimation</a></li>
-                    <li><a href="simulation.html">Simulation de prêt</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="legal-notes.html">Mentions légales</a></li>
+                    <li>
+                        <a href="#">Accueil</a> <span >|</span>
+                    </li>
+                    <li>
+                        <a href="agency.html">L'agence</a> <span >|</span>
+                    </li>
+                    <li>
+                        <a href="#">Que recherchez-vous ?</a> <span>|</span>
+                    </li>
+                    <li>
+                        <a href="#">Confiez-nous votre bien</a> <span>|</span>
+                    </li>
+                    <li>
+                        <a href="#">Simulation de prêt</a> <span>|</span>
+                    </li>
+                    <li>
+                        <a href="#">Contact </a> <span>|</span>
+                    </li>
+                    <li>
+                        <a href="#">Mentions légales </a> <span>|</span>
+                    </li>
+                    <li>
+                        <a href="#">NOS HONORAIRES </a>
+                    </li>
                 </ul>
             </div>
-        </nav>
-        <section class="footerBase container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-8">
-                    <a class="companyTitleLink" href="listing-details.html"><h3 class="companyTitle">IMMOBILIER AIX-EN-PROVENCE</h3></a>
-                    <p class="companySubTitle">AGENCE MJB - 9 RUE FREDERIC MISTRAL - 13100 Aix En Provence (France) - Tél : 04.42.38.32.89 - Fax : 04.42.38.49.77</p>
-                </div>
-                <div class="col-xs-12 col-sm-4 contactAgenceButtonArea">
-                    <a href="contact.html"><button type="button" class="button contactAgenceButton" name="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contacter l’agence</button></a>
-                </div>
-                <div class="col-xs-12 locationTags">
-                    <ul>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 1</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 2</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 3</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 4</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 5</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 6</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 7</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 8</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 9</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 10</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-8 footerCopyright">
-                    <p>Plan du site - <a href="legal-notes.html">Mentions légales</a> - Liens - Accès</p>
-                    <p>Site immobilier partenaire et réalisé par <a href="http://www.dmaisons-provence.com" target="_blank">DMaisons Provence</a> - <a href="http://www.i-w-s-logiciel.com/" target="_blank">Logiciel Immobilier</a> © Copyright 2011-2017</p>
-                </div>
-                <div class="col-xs-12 col-sm-4 footerCopyrightDmaisons">
-                    <img src="img/dmaisonsLogoMini.png" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                    <p>Création de site immobilier<br>Logiciel immobilier<br>Référencement site immobilier</p>
+
+        </div>
+        <!-- Footer Top Links Block Ends -->
+
+        <!-- Footer Contacts Partners Block Starts -->
+        <div class="container-fluid rowcontainer">
+            <div class="container footer-contacts-partners-bg">
+                <div class="row col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="row-col footer-contacts-partners footer-block-inner-clr">
+                        <div class="col-md-8 col-sm-8 col-xs-12 text-left footer-contacts">
+                            <p> <a href="#"><b>IMMOBILIER AIX-EN-PROVENCE</b></a></p>
+                            <p class="font-11">AGENCE MJB - 9 RUE FREDERIC MISTRAL - 13100 Aix En Provence (France) - Tél : 04.42.38.32.89 - Fax : 04.42.38.49.77</p>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 text-right footer-contacts">
+                            <div class=" contactAgenceButtonArea">
+                                <a href="contact.html"><button type="button" class="button contactAgenceButton" name="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contacter l’agence</button></a>
+                            </div>                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+            <!-- Footer Contacts Partners Block Ends -->
+        </div>
+        <!-- adress bar -->
+        <div class="container-fluid rowcontainer backlight">
+            <div class="container adress">
+                <div class="row text-center">
+                    <p class="Villeneuve">Béziers (34500) - Villeneuve lès Béziers (34420) - Lamalou les Bains (34240) - Sérignan (34410) - Pézenas (34120) - Béziers (34500) - Villeneuve lès Béziers (34420) - Lamalou les Bains (34240) - Sérignan (34410) - Pézenas (34120)<br>
+                        Villeneuve lès Béziers (34420) - Lamalou les Bains (34240) - Sérignan (34410) - Pézenas (34120) - Béziers (34500) - Villeneuve lès Béziers (34420) - Lamalou les Bains (34240) - Sérignan (34410) - Pézenas (34120)</p>
+                </div>
+            </div>
+        </div>
+        <!--  adress bar end -->
+        <!-- Footer Copyright Block Starts -->
+        <div class="container-fluid">
+            <div class="container footer-copyright-block-bg">
+                <div class="row-inner col-md-12 col-sm-12 col-xs-12 ">
+                    <div class="row-col footer-copyright-block footer-block-inner-clr">
+                        <div class="col-md-9 col-sm-9 col-xs-12 footer-copyright-info font-11 vtop" style="padding:0">
+                            <p>Plan du site - Mentions légales - Liens - Accès <br>
+                                Site immobilier partenaire et réalisé par DMaisons Provence - Logiciel Immobilier &#169; Copyright 2011-2017</p>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12 text-left-m text-right-d footer-copyright-logo marg-top10-m ">
+                            <div class="row-col-auto-w text-left-m text-right-d ">
+                                <div class="row-col-auto-w vtop ">
+                                    <img src="img/footer-icon.png" alt="Footer Icon3" />
+                                </div>
+                                <div class="row-col-auto-w text-left">
+                                    <p>Création de site immobilier</p>
+                                    <p>Logiciel immobilier</p>
+                                    <p>Référencement site immobilier</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright Block Ends -->
+        </div>
     </footer>
-    <!-- /footer -->
+    <!-- Footer Section Model2 Ends -->
 
     <!-- footer JS -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/select2.min"></script>
-    <script type="text/javascript">
-        !function(a,b,c){var d=a.querySelectorAll(".fileUpload");Array.prototype.forEach.call(d,function(a){var b=a.nextElementSibling,c=b.innerHTML;a.addEventListener("change",function(a){var d="";d=this.files&&this.files.length>1?(this.getAttribute("data-multiple-caption")||"").replace("{count}",this.files.length):a.target.value.split("\\").pop(),d?b.querySelector("span").innerHTML=d:b.innerHTML=c}),a.addEventListener("focus",function(){a.classList.add("has-focus")}),a.addEventListener("blur",function(){a.classList.remove("has-focus")})})}(document,window,0);
-    </script>
+ 
 
   </body>
 </html>

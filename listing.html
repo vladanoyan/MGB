@@ -14,6 +14,7 @@
     <meta name="distribution" content="Global">
     <meta name="copyright" content="Copyright © 2017">
     <!-- CSS -->
+    <link href="css/select2.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -101,13 +102,13 @@
     </header>
     <!-- /header -->
 
-    <!-- main content -->
+     <!-- main content -->
     <div class="container mainContainer">
         <div class="row">
             <!-- page section -->
             <section class="pageSection listingSection">
                 <!-- filtres -->
-                <div class="col-xs-12">
+                 <div class="col-xs-12">
                     <div class="filtreArea">
                         <h3 class="areaTitle">Recherche détaillée</h3>
                         <div class="filtreContent">
@@ -188,11 +189,57 @@
                     </div>
                 </div>
                 <!-- /filtres -->
+                     <!-- Listing Sort Model1 Starts -->
+    <section id="listing-sort" class="container listing-sort-m1">
+        <div class="row section-bg" >
+            <div class="row-inner col-md-12 col-sm-12 col-xs-12 lst-sort-block ease-trans">
+                <div class="row text-right lst-sort-block-bg pad-btm13">
+                    <form role="form">
+                        <div class="col-md-5 col-sm-5 col-xs-12 text-left cnt">
+                            <h2><b>198</b> Annonces immobilières</h2>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-12 text-right cnt" style="margin-top: 12px; ">
+                            <div class="form-group col-md-7 col-sm-7 col-xs-12 " style="margin-bottom: 10px;">
+                                <label class="sr-only" for="lst-sort-control">Sort</label>
+                                <select name="lst-sort-control" class="form-control select2-sel select2-sel-v1 arrow-m2" id="lst-sort-control">
+                                    <optgroup label="Prix">
+                                        <option value="prix-opt1">Prix (croissant)</option>
+                                        <option value="prix-opt2">Prix (décroissant)</option>
+                                    </optgroup>
+                                    <optgroup label="Date">
+                                        <option value="date-opt1">Date (croissant)</option>
+                                        <option value="date-opt2">Date (croissant)</option>
+                                    </optgroup>
+                                    <optgroup label="Surface">
+                                        <option value="surface-opt1">Surface (croissant)</option>
+                                        <option value="surface-opt2">Surface (décroissant)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="row-col-auto-w col-md-5 col-sm-5 col-xs-12 text-center " style="margin-bottom: 10px;">
+                                <a href="#" class="btn btn-link-icn-crcl btn-link-icn-crcl-m1 btn-md btn-sort-clr border-rounded w-35 vmiddle marg-top10-m-t hvr-shadow-effect2" title="Ajouter à ma sélection">
+                                    <i class="fa fa-sort-desc"></i>
+                                </a>
+                                <a href="#" class="btn btn-link btn-link-m1 btn-md btn-link-clr border-rounded marg-top10-m-t hvr-shadow-effect2" title="Vignette">
+                                    <i class="fa fa-align-justify"></i>
+                                </a>
+                                <a href="#" class="btn btn-link btn-link-m1 btn-md btn-link-clr1 border-rounded marg-top10-m-t hvr-shadow-effect2" title="Liste">
+                                    <i class="fa fa-th"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div><!-- /.row-col -->
+            </div><!-- /.row-inner -->
+        </div><!-- /.row -->
+    </section>
+    <!-- Listing Sort Model1 Ends -->
                 <!-- listing item -->
                 <div class="listingItem">
                     <div class="col-xs-12 col-md-5 leftChild">
                         <div class="listingItemCoverImage">
-                            <a href="fiche-bien.html"><img src="img/sampleListingImage.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence"></a>
+                            <a href="fiche-bien.html"><img src="img/sampleListingImage5.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence"></a>
                             <a href="fiche-bien.html" class="overlayLink">
                                 <div class="overlayLinkInner">
                                     <h1 class="plus">+</h1>
@@ -207,7 +254,7 @@
                                 <div class="col-xs-12 col-md-7 col-lg-8">
                                     <a href="fiche-bien.html"><h3 class="bienTypeTitle headerItem">Vente / Appartement</h3></a>
                                     <a href="fiche-bien.html"><h3 class="bienTitle headerItem">Aix-en-Provence (13100)</h3></a>
-                                    <a href="fiche-bien.html"><h3 class="bienPrice headerItem">Prix: 599 0000 €</h3></a>
+                                    <a href="fiche-bien.html"><h3 class="bienPrice headerItem">Prix: 880 € / <span class="listing-item-price-color">mois honoraires : 956.8 € TTC </span></h3></a>
                                     <a href="fiche-bien.html"><p class="bienID headerItem">Réf : 123 / 1256 - Mise à jour le 24/05/2015</p></a>
                                 </div>
                                 <div class="col-xs-12 col-md-5 col-lg-4">
@@ -223,246 +270,263 @@
                                     <div class="bienShortDescription">
                                         <p>A 5 minutes de Aix-en-Provence, maison récente d'une surface d'environ 130 m² comprenant 4 chambres, vaste séjour d'environ 38 m², cuisine équipée et aménagée, aucun travaux à prevoir, le tout sur un terrain d'environ 300 m².</p>
                                         <div class="bienButtons">
-                                            <button type="button" name="button" class="bienButton dButton">
+                                            <!-- DPE GES Model1 Version1 DPE Starts -->
+                                        <div class="row-cl-auto-w-no-m btn-hover-container dpe-ges-block-m1-v1">
+                                            <a  class="btn-DPE-GES img-ges1 btn-DPE-GES-m1 btn-md btn-DPE-GES-clr border-rect btn-hover">
+                                                <i class="icon-DPE"></i>
+                                                <span class="btn-label-DPE-GES">D</span>
+                                            </a>
+                                            <!-- DPE Block Starts -->
+                                            <div class="hover-content w-180 text-left" style="display: none;">
+                                                <div class="dpe-block">
+                                            <div class="dpe-block-cover no-selected"></div>
+                                                <header class="text-left header-equal"><b>DPE</b><span> (Performance Energétique)</span></header>
+                                                <div class="marg-top5 dpe-blck">
+                                                    <header class="dpe-ges-blck-txt">Logement économe</header>
+                                                    <div class="dpe-ges-graph marg-top10">
+                                                        <ul>
+                                                            <!-- <=50 Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-3">
+                                                                    <span>&lt;=50 </span>
+                                                                    <span>A</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>49</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- <=50 Block Ends -->
 
-                                                <div class="hover-content">
-                                					<header><b>DPE</b><br> <span>(Performance Energétique)</span></header>
-                                					<div class="dpe-blck">
-                                						<header>Logement économe</header>
-                                						<div class="lst-itm-dpe-ges-block dpe-ges-graph">
-                                							<ul>
-                                								<!-- >=50 Block Starts -->
-                                								<li>
-                                									<div class="col-xs-3">
-                                										<span>&lt;=50 </span>
-                                										<span>A</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=50 Block Ends -->
+                                                            <!-- >=51 and <=90  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-4">
+                                                                    <span>51 à 90 </span>
+                                                                    <span>B</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>55</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=51 and <=90  Block Starts -->
 
-                                								<!-- >=91 and <150  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-4">
-                                										<span>51 à 90 </span>
-                                										<span>B</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=91 and <150  Block Starts -->
+                                                            <!-- >=91 and <=150  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-5">
+                                                                    <span>91 à 150 </span>
+                                                                    <span>C</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>95</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=91 and <=150  Block Ends -->
 
-                                								<!-- >=91 and <150  Block Starts -->
-                                								<li class="selected">
-                                									<div class="col-xs-5">
-                                										<span>91 à 150 </span>
-                                										<span>C</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span>94</span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=91 and <150  Block Ends -->
+                                                            <!-- >=151 and <=230  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-6">
+                                                                    <span>151 à 230 </span>
+                                                                    <span>D</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>181</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=151 and <=230  Block Ends -->
 
-                                								<!-- >=151 and <230  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-6">
-                                										<span>151 à 230 </span>
-                                										<span>D</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=151 and <230  Block Ends -->
+                                                            <!-- >=231 and <=330  Block Starts -->
+                                                            <li class="selected">
+                                                                <div class="col-xs-7">
+                                                                    <span>231 à 330 </span>
+                                                                    <span>E</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>250</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=231 and <=330  Block Ends -->
 
-                                								<!-- >=231 and <330  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-7">
-                                										<span>231 à 330 </span>
-                                										<span>E</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=231 and <330  Block Ends -->
+                                                            <!-- >=331 and <=450  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-8">
+                                                                    <span>331 à 450 </span>
+                                                                    <span>F</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>340</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=331 and <=450  Block Ends -->
 
-                                								<!-- >=331 and <450  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-8">
-                                										<span>331 à 450 </span>
-                                										<span>F</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=331 and <450  Block Ends -->
+                                                            <!-- >450  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-9">
+                                                                    <span>&gt; 450  </span>
+                                                                    <span>G</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>500</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >450  Block Ends -->
+                                                        </ul>
+                                                    </div>
+                                                    <div class="dpe-ges-blck-txt marg-top5">Logement énergivore</div>
+                                                </div>
+                                            </div>
+                                               </div>
+                                            <!-- DPE Block Ends -->
+                                        </div>
+                                        <!-- DPE GES Model1 Version1 DPE Ends -->
 
-                                								<!-- >450  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-9">
-                                										<span>&gt; 450  </span>
-                                										<span>G</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >450  Block Ends -->
-                                							</ul>
-                                						</div>
-                                						<div class="dpe-ges-blck-txt marg-top5">Logement énergivore</div>
-                                					</div>
-                                				</div>
+                                        <!-- DPE GES Model1 Version1 GES Starts -->
+                                        <div class="row-cl-auto-w-no-m btn-hover-container dpe-ges-block-m1-v1">
+                                            <a  class="btn-DPE-GES img-ges2 btn-DPE-GES-m1 btn-md btn-DPE-GES-clr border-rect btn-hover">
+                                                <i class="icon-GES"></i>
+                                                <span class="btn-label-DPE-GES">C</span>
+                                            </a>
+                                            <!-- GES Block Starts -->
+                                            <div class="hover-content w-180 text-left" style="display: none;">
+                                            <div class="ges-block">
+                                            <div class="ges-block-cover inprogress"></div>
+                                                <header class="text-left header-equal"><b>GES</b><span> (Effet de Serre)</span></header>
+                                                <div class="marg-top5 ges-blck">
+                                                    <header class="dpe-ges-blck-txt">Faible émission de GES</header>
+                                                    <div class="dpe-ges-graph marg-top10">
+                                                        <ul>
+                                                            <!-- <=5 Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-3">
+                                                                    <span>&lt;=5 </span>
+                                                                    <span>A</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- <=5 Block Ends -->
 
-                                            </button>
-                                            <button type="button" name="button" class="bienButton cButton">
+                                                            <!-- >=6 and <=10  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-4">
+                                                                    <span>6 à 10 </span>
+                                                                    <span>B</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>7</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=6 and <=10  Block Starts -->
 
-                                                <div class="hover-content">
-                                					<header><b>GES</b><br> <span>(Effet de Serre)</span></header>
-                                					<div class="ges-blck">
-                                						<header class="dpe-ges-blck-txt">Faible émission de GES</header>
-                                						<div class="dpe-ges-graph">
-                                							<ul>
-                                								<!-- <=5 Block Starts -->
+                                                            <!-- >=11 and <=20  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-5">
+                                                                    <span>11 à 20 </span>
+                                                                    <span>C</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>15</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=11 and <=20  Block Ends -->
 
-                                								<li>
-                                									<div class="col-xs-3">
-                                										<span>&lt;=5 </span>
-                                										<span>A</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- <=5 Block Ends -->
+                                                            <!-- >=21 and <=35  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-6">
+                                                                    <span>21 à 35</span>
+                                                                    <span>D</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>30</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=21 and <=35  Block Ends -->
 
-                                								<!-- >=6 and <10  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-4">
-                                										<span>6 à 10 </span>
-                                										<span>B</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=6 and <10  Block Starts -->
+                                                            <!-- >=36 and <=55  Block Starts -->
+                                                            <li class="selected">
+                                                                <div class="col-xs-7">
+                                                                    <span>36 à 55 </span>
+                                                                    <span>E</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>40</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=36 and <=55  Block Ends -->
 
-                                								<!-- >=11 and <20  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-5">
-                                										<span>11 à 20 </span>
-                                										<span>C</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=11 and <20  Block Ends -->
+                                                            <!-- >=56 and <=80  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-8">
+                                                                    <span>56 à 80</span>
+                                                                    <span>F</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>59</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=56 and <=80  Block Ends -->
 
-                                								<!-- >=21 and <35  Block Starts -->
-                                								<li class="selected">
-                                									<div class="col-xs-6">
-                                										<span>21 à 35</span>
-                                										<span>D</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span>22</span>
-                                										</div>
-                                									</div>
-
-                                									<!-- >=21 and <35  Block Ends -->
-
-                                									<!-- >=36 and <55  Block Starts -->
-                                								</li>
-                                                                <li>
-                                									<div class="col-xs-7">
-                                										<span>36 à 55 </span>
-                                										<span>E</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=36 and <55  Block Ends -->
-
-                                								<!-- >=56 and <80  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-8">
-                                										<span>56 à 80</span>
-                                										<span>F</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=56 and <80  Block Ends -->
-
-                                								<!-- >80  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-9">
-                                										<span>&gt; 80  </span>
-                                										<span>G</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >80  Block Ends -->
-                                							</ul>
-                                						</div>
-                                						<div class="dpe-ges-blck-txt">Forte émission de GES</div>
-                                					</div>
-                                				</div>
-
-                                            </button>
+                                                            <!-- >80  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-9">
+                                                                    <span>&gt; 80  </span>
+                                                                    <span>G</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>100</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >80  Block Ends -->
+                                                        </ul>
+                                                    </div>
+                                                    <div class="dpe-ges-blck-txt marg-top5">Forte émission de GES</div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <!-- GES Block Ends -->
+                                        </div>
+                                        <!-- DPE GES Model1 Version1 GES Ends -->
                                             <button type="button" name="button" class="bienButton markerButton"></button>
                                             <button type="button" name="button" class="bienButton userButton"></button>
                                             <button type="button" name="button" class="bienButton calcButton"></button>
@@ -491,51 +555,7 @@
                                     <div class="col-xs-12 col-sm-5 contactAgencyButton">
                                         <button type="button" name="button" class="button" data-toggle="modal" data-target="#listing1"><i class="fa fa-envelope" aria-hidden="true"></i>Contacter l’agence</button>
 
-                                        <!-- modal -->
-                                        <div class="modal fade" id="listing1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                          <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modalHeaderSection">
-                                                    <div class="agencyLogo">
-                                                        <img src="img/mainLogoT.png" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                                                    </div>
-                                                    <img class="coverImage" src="img/sampleListingImage.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                                                </div>
-                                                <div class="bienHeader">
-                                                    <h3 class="bienTypeTitle">Vente / Appartement</h3>
-                                                    <h3 class="bienTitle">Aix-en-Provence (13100)</h3>
-                                                    <h3 class="bienPrice">Prix: 599 0000 €</h3>
-                                                    <p class="bienID">Réf : 123 / 1256 - Mise à jour le 24/05/2015</p>
-                                                </div>
-                                                <form>
-                                                    <div class="formItem">
-                                                        <select class="form-control">
-                                                            <option value="0" selected="">M.</option>
-                                                            <option value="1">Mme</option>
-                                                            <option value="2">Mlle</option>
-                                                            <option value="3">Sté</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="Nom*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="Téléphone*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="E-mail*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <textarea class="form-control" type="text" rows="7" placeholder="Question"></textarea>
-                                                    </div>
-                                                    <div class="formButtonArea">
-                                                        <button type="submit" class="button formButton"><i class="fa fa-envelope" aria-hidden="true"></i>Envoyer</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <!-- /modal -->
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -547,7 +567,7 @@
                 <div class="listingItem">
                     <div class="col-xs-12 col-md-5 leftChild">
                         <div class="listingItemCoverImage">
-                            <a href="fiche-bien.html"><img src="img/sampleListingImage2.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence"></a>
+                            <a href="fiche-bien.html"><img src="img/sampleListingImage.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence"></a>
                             <a href="fiche-bien.html" class="overlayLink">
                                 <div class="overlayLinkInner">
                                     <h1 class="plus">+</h1>
@@ -562,7 +582,7 @@
                                 <div class="col-xs-12 col-md-7 col-lg-8">
                                     <a href="fiche-bien.html"><h3 class="bienTypeTitle headerItem">Vente / Appartement</h3></a>
                                     <a href="fiche-bien.html"><h3 class="bienTitle headerItem">Aix-en-Provence (13100)</h3></a>
-                                    <a href="fiche-bien.html"><h3 class="bienPrice headerItem">Prix: 599 0000 €</h3></a>
+                                   <a href="fiche-bien.html"><h3 class="bienPrice headerItem">Prix: 880 € CC / <span class="listing-item-price-color">mois honoraires : 956.8 € TTC </span></h3></a>
                                     <a href="fiche-bien.html"><p class="bienID headerItem">Réf : 123 / 1256 - Mise à jour le 24/05/2015</p></a>
                                 </div>
                                 <div class="col-xs-12 col-md-5 col-lg-4">
@@ -578,242 +598,264 @@
                                     <div class="bienShortDescription">
                                         <p>A 5 minutes de Aix-en-Provence, maison récente d'une surface d'environ 130 m² comprenant 4 chambres, vaste séjour d'environ 38 m², cuisine équipée et aménagée, aucun travaux à prevoir, le tout sur un terrain d'environ 300 m².</p>
                                         <div class="bienButtons">
-                                            <button type="button" name="button" class="bienButton dButton">
-                                                <div class="hover-content">
-                                					<header><b>DPE</b><br> <span>(Performance Energétique)</span></header>
-                                					<div class="dpe-blck">
-                                						<header>Logement économe</header>
-                                						<div class="lst-itm-dpe-ges-block dpe-ges-graph">
-                                							<ul>
-                                								<!-- >=50 Block Starts -->
-                                								<li>
-                                									<div class="col-xs-3">
-                                										<span>&lt;=50 </span>
-                                										<span>A</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=50 Block Ends -->
+                                            <!-- DPE GES Model1 Version1 DPE Starts -->
+                                        <div class="row-cl-auto-w-no-m btn-hover-container dpe-ges-block-m1-v1">
+                                            <a href="#" class="btn-DPE-GES img-ges1 btn-DPE-GES-m1 btn-md btn-DPE-GES-clr border-rect btn-hover">
+                                                <i class="icon-DPE"></i>
+                                                <span class="btn-label-DPE-GES">D</span>
+                                            </a>
+                                            <!-- DPE Block Starts -->
+                                            <div class="hover-content w-180 text-left" style="display: none;">
+                                             <div class="dpe-block">
+                                            <div class="dpe-block-cover no-selected"></div>
+                                                <header class="text-left header-equal"><b>DPE</b><span> (Performance Energétique)</span></header>
+                                                <div class="marg-top5 dpe-blck">
+                                                    <header class="dpe-ges-blck-txt">Logement économe</header>
+                                                    <div class="dpe-ges-graph marg-top10">
+                                                        <ul>
+                                                            <!-- <=50 Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-3">
+                                                                    <span>&lt;=50 </span>
+                                                                    <span>A</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>49</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- <=50 Block Ends -->
 
-                                								<!-- >=91 and <150  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-4">
-                                										<span>51 à 90 </span>
-                                										<span>B</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=91 and <150  Block Starts -->
+                                                            <!-- >=51 and <=90  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-4">
+                                                                    <span>51 à 90 </span>
+                                                                    <span>B</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>55</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=51 and <=90  Block Starts -->
 
-                                								<!-- >=91 and <150  Block Starts -->
-                                								<li class="selected">
-                                									<div class="col-xs-5">
-                                										<span>91 à 150 </span>
-                                										<span>C</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span>94</span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=91 and <150  Block Ends -->
+                                                            <!-- >=91 and <=150  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-5">
+                                                                    <span>91 à 150 </span>
+                                                                    <span>C</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>95</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=91 and <=150  Block Ends -->
 
-                                								<!-- >=151 and <230  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-6">
-                                										<span>151 à 230 </span>
-                                										<span>D</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=151 and <230  Block Ends -->
+                                                            <!-- >=151 and <=230  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-6">
+                                                                    <span>151 à 230 </span>
+                                                                    <span>D</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>181</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=151 and <=230  Block Ends -->
 
-                                								<!-- >=231 and <330  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-7">
-                                										<span>231 à 330 </span>
-                                										<span>E</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=231 and <330  Block Ends -->
+                                                            <!-- >=231 and <=330  Block Starts -->
+                                                            <li class="selected">
+                                                                <div class="col-xs-7">
+                                                                    <span>231 à 330 </span>
+                                                                    <span>E</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>250</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=231 and <=330  Block Ends -->
 
-                                								<!-- >=331 and <450  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-8">
-                                										<span>331 à 450 </span>
-                                										<span>F</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=331 and <450  Block Ends -->
+                                                            <!-- >=331 and <=450  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-8">
+                                                                    <span>331 à 450 </span>
+                                                                    <span>F</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>340</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=331 and <=450  Block Ends -->
 
-                                								<!-- >450  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-9">
-                                										<span>&gt; 450  </span>
-                                										<span>G</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >450  Block Ends -->
-                                							</ul>
-                                						</div>
-                                						<div class="dpe-ges-blck-txt marg-top5">Logement énergivore</div>
-                                					</div>
-                                				</div>
-                                            </button>
-                                            <button type="button" name="button" class="bienButton cButton">
-                                                <div class="hover-content">
-                                					<header><b>GES</b><br> <span>(Effet de Serre)</span></header>
-                                					<div class="ges-blck">
-                                						<header class="dpe-ges-blck-txt">Faible émission de GES</header>
-                                						<div class="dpe-ges-graph">
-                                							<ul>
-                                								<!-- <=5 Block Starts -->
+                                                            <!-- >450  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-9">
+                                                                    <span>&gt; 450  </span>
+                                                                    <span>G</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>500</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >450  Block Ends -->
+                                                        </ul>
+                                                    </div>
+                                                    <div class="dpe-ges-blck-txt marg-top5">Logement énergivore</div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <!-- DPE Block Ends -->
+                                        </div>
+                                        <!-- DPE GES Model1 Version1 DPE Ends -->
 
-                                								<li>
-                                									<div class="col-xs-3">
-                                										<span>&lt;=5 </span>
-                                										<span>A</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- <=5 Block Ends -->
+                                        <!-- DPE GES Model1 Version1 GES Starts -->
+                                        <div class="row-cl-auto-w-no-m btn-hover-container dpe-ges-block-m1-v1">
+                                            <a href="#" class="btn-DPE-GES img-ges2 btn-DPE-GES-m1 btn-md btn-DPE-GES-clr border-rect btn-hover">
+                                                <i class="icon-GES"></i>
+                                                <span class="btn-label-DPE-GES">C</span>
+                                            </a>
+                                            <!-- GES Block Starts -->
+                                            <div class="hover-content w-180 text-left" style="display: none;">
+                                             <div class="ges-block">
+                                            <div class="ges-block-cover inprogress"></div>
+                                                <header class="text-left header-equal"><b>GES</b><span> (Effet de Serre)</span></header>
+                                                <div class="marg-top5 ges-blck">
+                                                    <header class="dpe-ges-blck-txt">Faible émission de GES</header>
+                                                    <div class="dpe-ges-graph marg-top10">
+                                                        <ul>
+                                                            <!-- <=5 Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-3">
+                                                                    <span>&lt;=5 </span>
+                                                                    <span>A</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- <=5 Block Ends -->
 
-                                								<!-- >=6 and <10  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-4">
-                                										<span>6 à 10 </span>
-                                										<span>B</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=6 and <10  Block Starts -->
+                                                            <!-- >=6 and <=10  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-4">
+                                                                    <span>6 à 10 </span>
+                                                                    <span>B</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>7</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=6 and <=10  Block Starts -->
 
-                                								<!-- >=11 and <20  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-5">
-                                										<span>11 à 20 </span>
-                                										<span>C</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=11 and <20  Block Ends -->
+                                                            <!-- >=11 and <=20  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-5">
+                                                                    <span>11 à 20 </span>
+                                                                    <span>C</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>15</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=11 and <=20  Block Ends -->
 
-                                								<!-- >=21 and <35  Block Starts -->
-                                								<li class="selected">
-                                									<div class="col-xs-6">
-                                										<span>21 à 35</span>
-                                										<span>D</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span>22</span>
-                                										</div>
-                                									</div>
+                                                            <!-- >=21 and <=35  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-6">
+                                                                    <span>21 à 35</span>
+                                                                    <span>D</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>30</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=21 and <=35  Block Ends -->
 
-                                									<!-- >=21 and <35  Block Ends -->
+                                                            <!-- >=36 and <=55  Block Starts -->
+                                                            <li class="selected">
+                                                                <div class="col-xs-7">
+                                                                    <span>36 à 55 </span>
+                                                                    <span>E</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>40</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=36 and <=55  Block Ends -->
 
-                                									<!-- >=36 and <55  Block Starts -->
-                                								</li>
-                                                                <li>
-                                									<div class="col-xs-7">
-                                										<span>36 à 55 </span>
-                                										<span>E</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=36 and <55  Block Ends -->
+                                                            <!-- >=56 and <=80  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-8">
+                                                                    <span>56 à 80</span>
+                                                                    <span>F</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>59</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >=56 and <=80  Block Ends -->
 
-                                								<!-- >=56 and <80  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-8">
-                                										<span>56 à 80</span>
-                                										<span>F</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=56 and <80  Block Ends -->
+                                                            <!-- >80  Block Starts -->
+                                                            <li>
+                                                                <div class="col-xs-9">
+                                                                    <span>&gt; 80  </span>
+                                                                    <span>G</span>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                    <div>
+                                                                        <!-- Put label here -->
+                                                                        <span>100</span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <!-- >80  Block Ends -->
+                                                        </ul>
+                                                    </div>
+                                                    <div class="dpe-ges-blck-txt marg-top5">Forte émission de GES</div>
+                                                </div>
+                                            </div>
+                                            <!-- GES Block Ends -->
+                                        </div>
+                                      </div>
 
-                                								<!-- >80  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-9">
-                                										<span>&gt; 80  </span>
-                                										<span>G</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >80  Block Ends -->
-                                							</ul>
-                                						</div>
-                                						<div class="dpe-ges-blck-txt">Forte émission de GES</div>
-                                					</div>
-                                				</div>
-                                            </button>
+                                        <!-- DPE GES Model1 Version1 GES Ends -->
                                             <button type="button" name="button" class="bienButton markerButton"></button>
                                             <button type="button" name="button" class="bienButton userButton"></button>
                                             <button type="button" name="button" class="bienButton calcButton"></button>
@@ -840,53 +882,7 @@
                                         <p class="agencyDescription">Tél : 04.42.38.32.89</p>
                                     </div>
                                     <div class="col-xs-12 col-sm-5 contactAgencyButton">
-                                        <button type="button" name="button" class="button" data-toggle="modal" data-target="#listing2"><i class="fa fa-envelope" aria-hidden="true"></i>Contacter l’agence</button>
-
-                                        <!-- modal -->
-                                        <div class="modal fade" id="listing2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                          <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modalHeaderSection">
-                                                    <div class="agencyLogo">
-                                                        <img src="img/mainLogoT.png" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                                                    </div>
-                                                    <img class="coverImage" src="img/sampleListingImage2.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                                                </div>
-                                                <div class="bienHeader">
-                                                    <h3 class="bienTypeTitle">Vente / Appartement</h3>
-                                                    <h3 class="bienTitle">Aix-en-Provence (13100)</h3>
-                                                    <h3 class="bienPrice">Prix: 599 0000 €</h3>
-                                                    <p class="bienID">Réf : 123 / 1256 - Mise à jour le 24/05/2015</p>
-                                                </div>
-                                                <form>
-                                                    <div class="formItem">
-                                                        <select class="form-control">
-                                                            <option value="0" selected="">M.</option>
-                                                            <option value="1">Mme</option>
-                                                            <option value="2">Mlle</option>
-                                                            <option value="3">Sté</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="Nom*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="Téléphone*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="E-mail*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <textarea class="form-control" type="text" rows="7" placeholder="Question"></textarea>
-                                                    </div>
-                                                    <div class="formButtonArea">
-                                                        <button type="submit" class="button formButton"><i class="fa fa-envelope" aria-hidden="true"></i>Envoyer</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <!-- /modal -->
+                                        <button type="button" name="button" class="button" data-toggle="modal" data-target="#listing1"><i class="fa fa-envelope" aria-hidden="true"></i>Contacter l’agence</button>
                                     </div>
                                 </div>
                             </div>
@@ -894,1059 +890,17 @@
                     </div>
                 </div>
                 <!-- listing item -->
-                <!-- listing item -->
-                <div class="listingItem">
-                    <div class="col-xs-12 col-md-5 leftChild">
-                        <div class="listingItemCoverImage">
-                            <a href="fiche-bien.html"><img src="img/sampleListingImage3.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence"></a>
-                            <a href="fiche-bien.html" class="overlayLink">
-                                <div class="overlayLinkInner">
-                                    <h1 class="plus">+</h1>
-                                    <h3 class="text">Plus d'info</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-7 rightChild">
-                        <div class="listingItemInformartion">
-                            <div class="header">
-                                <div class="col-xs-12 col-md-7 col-lg-8">
-                                    <a href="fiche-bien.html"><h3 class="bienTypeTitle headerItem">Vente / Appartement</h3></a>
-                                    <a href="fiche-bien.html"><h3 class="bienTitle headerItem">Aix-en-Provence (13100)</h3></a>
-                                    <a href="fiche-bien.html"><h3 class="bienPrice headerItem">Prix: 599 0000 €</h3></a>
-                                    <a href="fiche-bien.html"><p class="bienID headerItem">Réf : 123 / 1256 - Mise à jour le 24/05/2015</p></a>
-                                </div>
-                                <div class="col-xs-12 col-md-5 col-lg-4">
-                                    <div class="headerButtons">
-                                        <button type="button" name="button" class="headerButton">Exclu</button>
-                                        <button type="button" name="button" class="headerButton nouveau">Nouveau</button>
-                                        <button type="button" name="button" class="headerButton fav"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="body">
-                                <div class="col-xs-12 col-sm-8">
-                                    <div class="bienShortDescription">
-                                        <p>A 5 minutes de Aix-en-Provence, maison récente d'une surface d'environ 130 m² comprenant 4 chambres, vaste séjour d'environ 38 m², cuisine équipée et aménagée, aucun travaux à prevoir, le tout sur un terrain d'environ 300 m².</p>
-                                        <div class="bienButtons">
-                                            <button type="button" name="button" class="bienButton dButton">
-                                                <div class="hover-content">
-                                					<header><b>DPE</b><br> <span>(Performance Energétique)</span></header>
-                                					<div class="dpe-blck">
-                                						<header>Logement économe</header>
-                                						<div class="lst-itm-dpe-ges-block dpe-ges-graph">
-                                							<ul>
-                                								<!-- >=50 Block Starts -->
-                                								<li>
-                                									<div class="col-xs-3">
-                                										<span>&lt;=50 </span>
-                                										<span>A</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=50 Block Ends -->
-
-                                								<!-- >=91 and <150  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-4">
-                                										<span>51 à 90 </span>
-                                										<span>B</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=91 and <150  Block Starts -->
-
-                                								<!-- >=91 and <150  Block Starts -->
-                                								<li class="selected">
-                                									<div class="col-xs-5">
-                                										<span>91 à 150 </span>
-                                										<span>C</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span>94</span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=91 and <150  Block Ends -->
-
-                                								<!-- >=151 and <230  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-6">
-                                										<span>151 à 230 </span>
-                                										<span>D</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=151 and <230  Block Ends -->
-
-                                								<!-- >=231 and <330  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-7">
-                                										<span>231 à 330 </span>
-                                										<span>E</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=231 and <330  Block Ends -->
-
-                                								<!-- >=331 and <450  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-8">
-                                										<span>331 à 450 </span>
-                                										<span>F</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=331 and <450  Block Ends -->
-
-                                								<!-- >450  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-9">
-                                										<span>&gt; 450  </span>
-                                										<span>G</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >450  Block Ends -->
-                                							</ul>
-                                						</div>
-                                						<div class="dpe-ges-blck-txt marg-top5">Logement énergivore</div>
-                                					</div>
-                                				</div>
-                                            </button>
-                                            <button type="button" name="button" class="bienButton cButton">
-                                                <div class="hover-content">
-                                					<header><b>GES</b><br> <span>(Effet de Serre)</span></header>
-                                					<div class="ges-blck">
-                                						<header class="dpe-ges-blck-txt">Faible émission de GES</header>
-                                						<div class="dpe-ges-graph">
-                                							<ul>
-                                								<!-- <=5 Block Starts -->
-
-                                								<li>
-                                									<div class="col-xs-3">
-                                										<span>&lt;=5 </span>
-                                										<span>A</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- <=5 Block Ends -->
-
-                                								<!-- >=6 and <10  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-4">
-                                										<span>6 à 10 </span>
-                                										<span>B</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=6 and <10  Block Starts -->
-
-                                								<!-- >=11 and <20  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-5">
-                                										<span>11 à 20 </span>
-                                										<span>C</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=11 and <20  Block Ends -->
-
-                                								<!-- >=21 and <35  Block Starts -->
-                                								<li class="selected">
-                                									<div class="col-xs-6">
-                                										<span>21 à 35</span>
-                                										<span>D</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span>22</span>
-                                										</div>
-                                									</div>
-
-                                									<!-- >=21 and <35  Block Ends -->
-
-                                									<!-- >=36 and <55  Block Starts -->
-                                								</li>
-                                                                <li>
-                                									<div class="col-xs-7">
-                                										<span>36 à 55 </span>
-                                										<span>E</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=36 and <55  Block Ends -->
-
-                                								<!-- >=56 and <80  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-8">
-                                										<span>56 à 80</span>
-                                										<span>F</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=56 and <80  Block Ends -->
-
-                                								<!-- >80  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-9">
-                                										<span>&gt; 80  </span>
-                                										<span>G</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >80  Block Ends -->
-                                							</ul>
-                                						</div>
-                                						<div class="dpe-ges-blck-txt">Forte émission de GES</div>
-                                					</div>
-                                				</div>
-                                            </button>
-                                            <button type="button" name="button" class="bienButton markerButton"></button>
-                                            <button type="button" name="button" class="bienButton userButton"></button>
-                                            <button type="button" name="button" class="bienButton calcButton"></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="bienDetails">
-                                        <ul>
-                                            <li>Surf. hab : 127 m2</li>
-                                            <li>Terrain : 300 m2</li>
-                                            <li>Nombre de pièces : 6</li>
-                                            <li>Chambres : 4</li>
-                                            <li>Avec Piscine</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="contactAgencySection">
-                                    <div class="col-xs-12 col-sm-2 contactAgencySectionLogoSection">
-                                        <img src="img/mainLogoT.png" alt="">
-                                    </div>
-                                    <div class="col-xs-12 col-sm-5 contactAgencySectionTitleSection">
-                                        <h4 class="agencyName">Agence MJB</h4>
-                                        <p class="agencyDescription">Tél : 04.42.38.32.89</p>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-5 contactAgencyButton">
-                                        <button type="button" name="button" class="button" data-toggle="modal" data-target="#listing3"><i class="fa fa-envelope" aria-hidden="true"></i>Contacter l’agence</button>
-
-                                        <!-- modal -->
-                                        <div class="modal fade" id="listing3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                          <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modalHeaderSection">
-                                                    <div class="agencyLogo">
-                                                        <img src="img/mainLogoT.png" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                                                    </div>
-                                                    <img class="coverImage" src="img/sampleListingImage3.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                                                </div>
-                                                <div class="bienHeader">
-                                                    <h3 class="bienTypeTitle">Vente / Appartement</h3>
-                                                    <h3 class="bienTitle">Aix-en-Provence (13100)</h3>
-                                                    <h3 class="bienPrice">Prix: 599 0000 €</h3>
-                                                    <p class="bienID">Réf : 123 / 1256 - Mise à jour le 24/05/2015</p>
-                                                </div>
-                                                <form>
-                                                    <div class="formItem">
-                                                        <select class="form-control">
-                                                            <option value="0" selected="">M.</option>
-                                                            <option value="1">Mme</option>
-                                                            <option value="2">Mlle</option>
-                                                            <option value="3">Sté</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="Nom*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="Téléphone*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="E-mail*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <textarea class="form-control" type="text" rows="7" placeholder="Question"></textarea>
-                                                    </div>
-                                                    <div class="formButtonArea">
-                                                        <button type="submit" class="button formButton"><i class="fa fa-envelope" aria-hidden="true"></i>Envoyer</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <!-- /modal -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  <!-- Note Block Starts -->
+    <section class="container note-section">
+            <div class="row section-bg">
+                <div class="row-inner col-xs-12 marg-top20">
+                    <div class="row-col text-right note-block-m1">
+                        <i>* (HAI) : Honoraires Agence Inclus</i>
                     </div>
                 </div>
-                <!-- listing item -->
-                <!-- listing item -->
-                <div class="listingItem">
-                    <div class="col-xs-12 col-md-5 leftChild">
-                        <div class="listingItemCoverImage">
-                            <a href="fiche-bien.html"><img src="img/sampleListingImage4.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence"></a>
-                            <a href="fiche-bien.html" class="overlayLink">
-                                <div class="overlayLinkInner">
-                                    <h1 class="plus">+</h1>
-                                    <h3 class="text">Plus d'info</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-7 rightChild">
-                        <div class="listingItemInformartion">
-                            <div class="header">
-                                <div class="col-xs-12 col-md-7 col-lg-8">
-                                    <a href="fiche-bien.html"><h3 class="bienTypeTitle headerItem">Vente / Appartement</h3></a>
-                                    <a href="fiche-bien.html"><h3 class="bienTitle headerItem">Aix-en-Provence (13100)</h3></a>
-                                    <a href="fiche-bien.html"><h3 class="bienPrice headerItem">Prix: 599 0000 €</h3></a>
-                                    <a href="fiche-bien.html"><p class="bienID headerItem">Réf : 123 / 1256 - Mise à jour le 24/05/2015</p></a>
-                                </div>
-                                <div class="col-xs-12 col-md-5 col-lg-4">
-                                    <div class="headerButtons">
-                                        <button type="button" name="button" class="headerButton">Exclu</button>
-                                        <button type="button" name="button" class="headerButton nouveau">Nouveau</button>
-                                        <button type="button" name="button" class="headerButton fav"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="body">
-                                <div class="col-xs-12 col-sm-8">
-                                    <div class="bienShortDescription">
-                                        <p>A 5 minutes de Aix-en-Provence, maison récente d'une surface d'environ 130 m² comprenant 4 chambres, vaste séjour d'environ 38 m², cuisine équipée et aménagée, aucun travaux à prevoir, le tout sur un terrain d'environ 300 m².</p>
-                                        <div class="bienButtons">
-                                            <button type="button" name="button" class="bienButton dButton">
-                                                <div class="hover-content">
-                                					<header><b>DPE</b><br> <span>(Performance Energétique)</span></header>
-                                					<div class="dpe-blck">
-                                						<header>Logement économe</header>
-                                						<div class="lst-itm-dpe-ges-block dpe-ges-graph">
-                                							<ul>
-                                								<!-- >=50 Block Starts -->
-                                								<li>
-                                									<div class="col-xs-3">
-                                										<span>&lt;=50 </span>
-                                										<span>A</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=50 Block Ends -->
-
-                                								<!-- >=91 and <150  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-4">
-                                										<span>51 à 90 </span>
-                                										<span>B</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=91 and <150  Block Starts -->
-
-                                								<!-- >=91 and <150  Block Starts -->
-                                								<li class="selected">
-                                									<div class="col-xs-5">
-                                										<span>91 à 150 </span>
-                                										<span>C</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span>94</span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=91 and <150  Block Ends -->
-
-                                								<!-- >=151 and <230  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-6">
-                                										<span>151 à 230 </span>
-                                										<span>D</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=151 and <230  Block Ends -->
-
-                                								<!-- >=231 and <330  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-7">
-                                										<span>231 à 330 </span>
-                                										<span>E</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=231 and <330  Block Ends -->
-
-                                								<!-- >=331 and <450  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-8">
-                                										<span>331 à 450 </span>
-                                										<span>F</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=331 and <450  Block Ends -->
-
-                                								<!-- >450  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-9">
-                                										<span>&gt; 450  </span>
-                                										<span>G</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >450  Block Ends -->
-                                							</ul>
-                                						</div>
-                                						<div class="dpe-ges-blck-txt marg-top5">Logement énergivore</div>
-                                					</div>
-                                				</div>
-                                            </button>
-                                            <button type="button" name="button" class="bienButton cButton">
-                                                <div class="hover-content">
-                                					<header><b>GES</b><br> <span>(Effet de Serre)</span></header>
-                                					<div class="ges-blck">
-                                						<header class="dpe-ges-blck-txt">Faible émission de GES</header>
-                                						<div class="dpe-ges-graph">
-                                							<ul>
-                                								<!-- <=5 Block Starts -->
-
-                                								<li>
-                                									<div class="col-xs-3">
-                                										<span>&lt;=5 </span>
-                                										<span>A</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- <=5 Block Ends -->
-
-                                								<!-- >=6 and <10  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-4">
-                                										<span>6 à 10 </span>
-                                										<span>B</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=6 and <10  Block Starts -->
-
-                                								<!-- >=11 and <20  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-5">
-                                										<span>11 à 20 </span>
-                                										<span>C</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=11 and <20  Block Ends -->
-
-                                								<!-- >=21 and <35  Block Starts -->
-                                								<li class="selected">
-                                									<div class="col-xs-6">
-                                										<span>21 à 35</span>
-                                										<span>D</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span>22</span>
-                                										</div>
-                                									</div>
-
-                                									<!-- >=21 and <35  Block Ends -->
-
-                                									<!-- >=36 and <55  Block Starts -->
-                                								</li>
-                                                                <li>
-                                									<div class="col-xs-7">
-                                										<span>36 à 55 </span>
-                                										<span>E</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=36 and <55  Block Ends -->
-
-                                								<!-- >=56 and <80  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-8">
-                                										<span>56 à 80</span>
-                                										<span>F</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=56 and <80  Block Ends -->
-
-                                								<!-- >80  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-9">
-                                										<span>&gt; 80  </span>
-                                										<span>G</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >80  Block Ends -->
-                                							</ul>
-                                						</div>
-                                						<div class="dpe-ges-blck-txt">Forte émission de GES</div>
-                                					</div>
-                                				</div>
-                                            </button>
-                                            <button type="button" name="button" class="bienButton markerButton"></button>
-                                            <button type="button" name="button" class="bienButton userButton"></button>
-                                            <button type="button" name="button" class="bienButton calcButton"></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="bienDetails">
-                                        <ul>
-                                            <li>Surf. hab : 127 m2</li>
-                                            <li>Terrain : 300 m2</li>
-                                            <li>Nombre de pièces : 6</li>
-                                            <li>Chambres : 4</li>
-                                            <li>Avec Piscine</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="contactAgencySection">
-                                    <div class="col-xs-12 col-sm-2 contactAgencySectionLogoSection">
-                                        <img src="img/mainLogoT.png" alt="">
-                                    </div>
-                                    <div class="col-xs-12 col-sm-5 contactAgencySectionTitleSection">
-                                        <h4 class="agencyName">Agence MJB</h4>
-                                        <p class="agencyDescription">Tél : 04.42.38.32.89</p>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-5 contactAgencyButton">
-                                        <button type="button" name="button" class="button" data-toggle="modal" data-target="#listing4"><i class="fa fa-envelope" aria-hidden="true"></i>Contacter l’agence</button>
-
-                                        <!-- modal -->
-                                        <div class="modal fade" id="listing4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                          <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modalHeaderSection">
-                                                    <div class="agencyLogo">
-                                                        <img src="img/mainLogoT.png" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                                                    </div>
-                                                    <img class="coverImage" src="img/sampleListingImage4.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                                                </div>
-                                                <div class="bienHeader">
-                                                    <h3 class="bienTypeTitle">Vente / Appartement</h3>
-                                                    <h3 class="bienTitle">Aix-en-Provence (13100)</h3>
-                                                    <h3 class="bienPrice">Prix: 599 0000 €</h3>
-                                                    <p class="bienID">Réf : 123 / 1256 - Mise à jour le 24/05/2015</p>
-                                                </div>
-                                                <form>
-                                                    <div class="formItem">
-                                                        <select class="form-control">
-                                                            <option value="0" selected="">M.</option>
-                                                            <option value="1">Mme</option>
-                                                            <option value="2">Mlle</option>
-                                                            <option value="3">Sté</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="Nom*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="Téléphone*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="E-mail*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <textarea class="form-control" type="text" rows="7" placeholder="Question"></textarea>
-                                                    </div>
-                                                    <div class="formButtonArea">
-                                                        <button type="submit" class="button formButton"><i class="fa fa-envelope" aria-hidden="true"></i>Envoyer</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <!-- /modal -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- listing item -->
-                <!-- listing item -->
-                <div class="listingItem">
-                    <div class="col-xs-12 col-md-5 leftChild">
-                        <div class="listingItemCoverImage">
-                            <a href="fiche-bien.html"><img src="img/sampleListingImage5.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence"></a>
-                            <a href="fiche-bien.html" class="overlayLink">
-                                <div class="overlayLinkInner">
-                                    <h1 class="plus">+</h1>
-                                    <h3 class="text">Plus d'info</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-7 rightChild">
-                        <div class="listingItemInformartion">
-                            <div class="header">
-                                <div class="col-xs-12 col-md-7 col-lg-8">
-                                    <a href="fiche-bien.html"><h3 class="bienTypeTitle headerItem">Vente / Appartement</h3></a>
-                                    <a href="fiche-bien.html"><h3 class="bienTitle headerItem">Aix-en-Provence (13100)</h3></a>
-                                    <a href="fiche-bien.html"><h3 class="bienPrice headerItem">Prix: 599 0000 €</h3></a>
-                                    <a href="fiche-bien.html"><p class="bienID headerItem">Réf : 123 / 1256 - Mise à jour le 24/05/2015</p></a>
-                                </div>
-                                <div class="col-xs-12 col-md-5 col-lg-4">
-                                    <div class="headerButtons">
-                                        <button type="button" name="button" class="headerButton">Exclu</button>
-                                        <button type="button" name="button" class="headerButton nouveau">Nouveau</button>
-                                        <button type="button" name="button" class="headerButton fav"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="body">
-                                <div class="col-xs-12 col-sm-8">
-                                    <div class="bienShortDescription">
-                                        <p>A 5 minutes de Aix-en-Provence, maison récente d'une surface d'environ 130 m² comprenant 4 chambres, vaste séjour d'environ 38 m², cuisine équipée et aménagée, aucun travaux à prevoir, le tout sur un terrain d'environ 300 m².</p>
-                                        <div class="bienButtons">
-                                            <button type="button" name="button" class="bienButton dButton">
-                                                <div class="hover-content">
-                                					<header><b>DPE</b><br> <span>(Performance Energétique)</span></header>
-                                					<div class="dpe-blck">
-                                						<header>Logement économe</header>
-                                						<div class="lst-itm-dpe-ges-block dpe-ges-graph">
-                                							<ul>
-                                								<!-- >=50 Block Starts -->
-                                								<li>
-                                									<div class="col-xs-3">
-                                										<span>&lt;=50 </span>
-                                										<span>A</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=50 Block Ends -->
-
-                                								<!-- >=91 and <150  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-4">
-                                										<span>51 à 90 </span>
-                                										<span>B</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=91 and <150  Block Starts -->
-
-                                								<!-- >=91 and <150  Block Starts -->
-                                								<li class="selected">
-                                									<div class="col-xs-5">
-                                										<span>91 à 150 </span>
-                                										<span>C</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span>94</span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=91 and <150  Block Ends -->
-
-                                								<!-- >=151 and <230  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-6">
-                                										<span>151 à 230 </span>
-                                										<span>D</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=151 and <230  Block Ends -->
-
-                                								<!-- >=231 and <330  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-7">
-                                										<span>231 à 330 </span>
-                                										<span>E</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=231 and <330  Block Ends -->
-
-                                								<!-- >=331 and <450  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-8">
-                                										<span>331 à 450 </span>
-                                										<span>F</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=331 and <450  Block Ends -->
-
-                                								<!-- >450  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-9">
-                                										<span>&gt; 450  </span>
-                                										<span>G</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >450  Block Ends -->
-                                							</ul>
-                                						</div>
-                                						<div class="dpe-ges-blck-txt marg-top5">Logement énergivore</div>
-                                					</div>
-                                				</div>
-                                            </button>
-                                            <button type="button" name="button" class="bienButton cButton">
-                                                <div class="hover-content">
-                                					<header><b>GES</b><br> <span>(Effet de Serre)</span></header>
-                                					<div class="ges-blck">
-                                						<header class="dpe-ges-blck-txt">Faible émission de GES</header>
-                                						<div class="dpe-ges-graph">
-                                							<ul>
-                                								<!-- <=5 Block Starts -->
-
-                                								<li>
-                                									<div class="col-xs-3">
-                                										<span>&lt;=5 </span>
-                                										<span>A</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- <=5 Block Ends -->
-
-                                								<!-- >=6 and <10  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-4">
-                                										<span>6 à 10 </span>
-                                										<span>B</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=6 and <10  Block Starts -->
-
-                                								<!-- >=11 and <20  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-5">
-                                										<span>11 à 20 </span>
-                                										<span>C</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=11 and <20  Block Ends -->
-
-                                								<!-- >=21 and <35  Block Starts -->
-                                								<li class="selected">
-                                									<div class="col-xs-6">
-                                										<span>21 à 35</span>
-                                										<span>D</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span>22</span>
-                                										</div>
-                                									</div>
-
-                                									<!-- >=21 and <35  Block Ends -->
-
-                                									<!-- >=36 and <55  Block Starts -->
-                                								</li>
-                                                                <li>
-                                									<div class="col-xs-7">
-                                										<span>36 à 55 </span>
-                                										<span>E</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=36 and <55  Block Ends -->
-
-                                								<!-- >=56 and <80  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-8">
-                                										<span>56 à 80</span>
-                                										<span>F</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >=56 and <80  Block Ends -->
-
-                                								<!-- >80  Block Starts -->
-                                								<li>
-                                									<div class="col-xs-9">
-                                										<span>&gt; 80  </span>
-                                										<span>G</span>
-                                									</div>
-                                									<div class="col-xs-3">
-                                										<div>
-                                											<!-- Put label here -->
-                                											<span></span>
-                                										</div>
-                                									</div>
-                                								</li>
-                                								<!-- >80  Block Ends -->
-                                							</ul>
-                                						</div>
-                                						<div class="dpe-ges-blck-txt">Forte émission de GES</div>
-                                					</div>
-                                				</div>
-                                            </button>
-                                            <button type="button" name="button" class="bienButton markerButton"></button>
-                                            <button type="button" name="button" class="bienButton userButton"></button>
-                                            <button type="button" name="button" class="bienButton calcButton"></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="bienDetails">
-                                        <ul>
-                                            <li>Surf. hab : 127 m2</li>
-                                            <li>Terrain : 300 m2</li>
-                                            <li>Nombre de pièces : 6</li>
-                                            <li>Chambres : 4</li>
-                                            <li>Avec Piscine</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="contactAgencySection">
-                                    <div class="col-xs-12 col-sm-2 contactAgencySectionLogoSection">
-                                        <img src="img/mainLogoT.png" alt="">
-                                    </div>
-                                    <div class="col-xs-12 col-sm-5 contactAgencySectionTitleSection">
-                                        <h4 class="agencyName">Agence MJB</h4>
-                                        <p class="agencyDescription">Tél : 04.42.38.32.89</p>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-5 contactAgencyButton">
-                                        <button type="button" name="button" class="button" data-toggle="modal" data-target="#listing5"><i class="fa fa-envelope" aria-hidden="true"></i>Contacter l’agence</button>
-
-                                        <!-- modal -->
-                                        <div class="modal fade" id="listing5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                          <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modalHeaderSection">
-                                                    <div class="agencyLogo">
-                                                        <img src="img/mainLogoT.png" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                                                    </div>
-                                                    <img class="coverImage" src="img/sampleListingImage5.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                                                </div>
-                                                <div class="bienHeader">
-                                                    <h3 class="bienTypeTitle">Vente / Appartement</h3>
-                                                    <h3 class="bienTitle">Aix-en-Provence (13100)</h3>
-                                                    <h3 class="bienPrice">Prix: 599 0000 €</h3>
-                                                    <p class="bienID">Réf : 123 / 1256 - Mise à jour le 24/05/2015</p>
-                                                </div>
-                                                <form>
-                                                    <div class="formItem">
-                                                        <select class="form-control">
-                                                            <option value="0" selected="">M.</option>
-                                                            <option value="1">Mme</option>
-                                                            <option value="2">Mlle</option>
-                                                            <option value="3">Sté</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="Nom*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="Téléphone*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <input class="form-control" type="text" placeholder="E-mail*">
-                                                    </div>
-                                                    <div class="formItem">
-                                                        <textarea class="form-control" type="text" rows="7" placeholder="Question"></textarea>
-                                                    </div>
-                                                    <div class="formButtonArea">
-                                                        <button type="submit" class="button formButton"><i class="fa fa-envelope" aria-hidden="true"></i>Envoyer</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <!-- /modal -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- listing item -->
+            </div>
+            <!-- Note Block Ends -->
+        </section>
                 <!-- pagination -->
                 <div class="col-xs-12">
                     <div class="pagination">
@@ -1966,66 +920,190 @@
         </div>
     </div>
     <!-- /main content -->
+ <!-- modal -->
+    <div class="modal fade" id="listing1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+             <div class="modalHeaderSection">
+              <div class="modal-hover">
+            <div class=" listing-item-parameters">
+                    <ul>                    
+                        <li class="col-c-txs-12 col-c-xs-6 col-c-sm-4 col-c-md-6 col-c-lg-4">Surf. hab : 127 m<sup>2</sup></li>
+                        <li class="col-c-txs-12 col-c-xs-6 col-c-sm-4 col-c-md-6 col-c-lg-4">Nombre de pièces:6</li>
+                        <li class="col-c-txs-12 col-c-xs-6 col-c-sm-4 col-c-md-6 col-c-lg-4">Avec Piscine</li>
+                        <li class="col-c-txs-12 col-c-xs-6 col-c-sm-4 col-c-md-6 col-c-lg-4">Terrain : 300 m<sup>2</sup></li>
+                        <li class="col-c-txs-12 col-c-xs-6 col-c-sm-4 col-c-md-6 col-c-lg-4">Chambres : 4</li>
+                        <li class="col-c-txs-12 col-c-xs-6 col-c-sm-4 col-c-md-6 col-c-lg-4">Meublé : X/li>
+                        
+                    </ul>
+                 </div>
+                    </div>
 
-    <!-- footer -->
-    <footer>
-        <nav class="siteMap">
-            <div class="container">
+
+                            <div class="agencyLogo">
+                                <img src="img/mainLogoT.png" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
+                            </div>
+                            <img class="coverImage" src="img/sampleListingImage.jpg" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
+                        </div>
+                        <div class="bienHeader">
+                            <h3 class="bienTypeTitle">Remplissez ce formulaire si vous souhaitez contacter l'agence.</h3>
+                            <h3 class="bienTitle"><span style="color:#882c2f">Les informations obligatoires sont indiquées avec un astérisque (*).</span></h3>
+                         </div>
+                        <form>
+                          <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-4 formItem">
+                                <select class="form-control">
+                                    <option value="0" selected="">M.</option>
+                                    <option value="1">Mme</option>
+                                    <option value="2">Mlle</option>
+                                    <option value="3">Sté</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-8 formItem">
+                                <input class="form-control " type="text" placeholder="Nom *">
+                            </div>
+                            <div class="col-xs-12 formItem form-error-m1 ">
+                                <input class="form-control" type="text" placeholder="Prénom">
+                            </div>
+                            <div class="col-xs-12 formItem form-error-m1 ">
+                                <input class="form-control" type="text" placeholder="Code Postal *">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12 formItem form-error-m1 form-error">
+                                <input class="form-control" type="text" class="col-xs-12" placeholder="Téléphone *">
+                                <div class="form-error-blck">
+                                    <a href="#" title="Vous devez indiquer votre adresse e-mail." data-placement="top"  class="error-btn" data-toggle="tooltip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 formItem form-error-m1 form-error">
+                                <input class="form-control" type="text" class="col-xs-12" placeholder="E-mail *">
+                                <div class="form-error-blck">
+                                    <a href="#" title="Vous devez indiquer votre adresse e-mail." data-placement="top"  class="error-btn" data-toggle="tooltip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 formItem form-error-m1 form-error">
+                                <input class="form-control" type="text" class="col-xs-12" placeholder="Ville *">
+                                <div class="form-error-blck">
+                                    <a href="#" title="Vous devez indiquer votre adresse e-mail." data-placement="top"  class="error-btn" data-toggle="tooltip"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="formItem">
+                                <textarea class="form-control" type="text" rows="7" placeholder="Vos commentaires"></textarea>
+                            </div>
+                            </div>
+                            <div class="formButtonArea">
+                                <button type="submit" class="button formButton"><i class="fa fa-envelope" aria-hidden="true"></i>Envoyer</button>
+                            </div>
+                        </form>
+                    </div>
+        </div>
+    </div>
+    <!-- /modal -->
+    <!-- Footer Section Model2 Starts -->
+    <footer id="footer" class="footer-m2 container-fluid">
+
+        <!-- Footer Top Links Block Starts -->
+        <div class=" text-center footer-top-links-bg">
+            <div class="row-inner col-md-10 col-sm-10 col-xs-12 footer-top-links footer-top-links-clr">
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="agency.html">Agence</a></li>
-                    <li><a href="listing.html">Vente</a></li>
-                    <li><a href="listing.html">Location</a></li>
-                    <li><a href="recherche.html">Recherche</a></li>
-                    <li><a href="estimation.html">Estimation</a></li>
-                    <li><a href="simulation.html">Simulation de prêt</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="legal-notes.html">Mentions légales</a></li>
+                    <li>
+                        <a href="#">Accueil</a> <span >|</span>
+                    </li>
+                    <li>
+                        <a href="agency.html">L'agence</a> <span >|</span>
+                    </li>
+                    <li>
+                        <a href="#">Que recherchez-vous ?</a> <span>|</span>
+                    </li>
+                    <li>
+                        <a href="#">Confiez-nous votre bien</a> <span>|</span>
+                    </li>
+                    <li>
+                        <a href="#">Simulation de prêt</a> <span>|</span>
+                    </li>
+                    <li>
+                        <a href="#">Contact </a> <span>|</span>
+                    </li>
+                    <li>
+                        <a href="#">Mentions légales </a> <span>|</span>
+                    </li>
+                    <li>
+                        <a href="#">NOS HONORAIRES </a>
+                    </li>
                 </ul>
             </div>
-        </nav>
-        <section class="footerBase container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-8">
-                    <a class="companyTitleLink" href="listing-details.html"><h3 class="companyTitle">IMMOBILIER AIX-EN-PROVENCE</h3></a>
-                    <p class="companySubTitle">AGENCE MJB - 9 RUE FREDERIC MISTRAL - 13100 Aix En Provence (France) - Tél : 04.42.38.32.89 - Fax : 04.42.38.49.77</p>
-                </div>
-                <div class="col-xs-12 col-sm-4 contactAgenceButtonArea">
-                    <a href="contact.html"><button type="button" class="button contactAgenceButton" name="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contacter l’agence</button></a>
-                </div>
-                <div class="col-xs-12 locationTags">
-                    <ul>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 1</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 2</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 3</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 4</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 5</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 6</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 7</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 8</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 9</a></li>
-                        <li class="col-xs-6 col-sm-4 col-lg-3"><a href="#">Immobilier Example 10</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-8 footerCopyright">
-                    <p>Plan du site - <a href="legal-notes.html">Mentions légales</a> - Liens - Accès</p>
-                    <p>Site immobilier partenaire et réalisé par <a href="http://www.dmaisons-provence.com" target="_blank">DMaisons Provence</a> - <a href="http://www.i-w-s-logiciel.com/" target="_blank">Logiciel Immobilier</a> © Copyright 2011-2017</p>
-                </div>
-                <div class="col-xs-12 col-sm-4 footerCopyrightDmaisons">
-                    <img src="img/dmaisonsLogoMini.png" alt="Agence immobilière Aix En Provence, AGENCE MJB, immobilier Aix En Provence">
-                    <p>Création de site immobilier<br>Logiciel immobilier<br>Référencement site immobilier</p>
+
+        </div>
+        <!-- Footer Top Links Block Ends -->
+
+        <!-- Footer Contacts Partners Block Starts -->
+        <div class="container-fluid rowcontainer">
+            <div class="container footer-contacts-partners-bg">
+                <div class="row col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="row-col footer-contacts-partners footer-block-inner-clr">
+                        <div class="col-md-8 col-sm-8 col-xs-12 text-left footer-contacts">
+                            <p> <a href="#"><b>IMMOBILIER AIX-EN-PROVENCE</b></a></p>
+                            <p class="font-11">AGENCE MJB - 9 RUE FREDERIC MISTRAL - 13100 Aix En Provence (France) - Tél : 04.42.38.32.89 - Fax : 04.42.38.49.77</p>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 text-right footer-contacts">
+                            <div class=" contactAgenceButtonArea">
+                                <a href="contact.html"><button type="button" class="button contactAgenceButton" name="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contacter l’agence</button></a>
+                            </div>                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+            <!-- Footer Contacts Partners Block Ends -->
+        </div>
+        <!-- adress bar -->
+        <div class="container-fluid rowcontainer backlight">
+            <div class="container adress">
+                <div class="row text-center">
+                    <p class="Villeneuve">Béziers (34500) - Villeneuve lès Béziers (34420) - Lamalou les Bains (34240) - Sérignan (34410) - Pézenas (34120) - Béziers (34500) - Villeneuve lès Béziers (34420) - Lamalou les Bains (34240) - Sérignan (34410) - Pézenas (34120)<br>
+                        Villeneuve lès Béziers (34420) - Lamalou les Bains (34240) - Sérignan (34410) - Pézenas (34120) - Béziers (34500) - Villeneuve lès Béziers (34420) - Lamalou les Bains (34240) - Sérignan (34410) - Pézenas (34120)</p>
+                </div>
+            </div>
+        </div>
+        <!--  adress bar end -->
+        <!-- Footer Copyright Block Starts -->
+        <div class="container-fluid">
+            <div class="container footer-copyright-block-bg">
+                <div class="row-inner col-md-12 col-sm-12 col-xs-12 ">
+                    <div class="row-col footer-copyright-block footer-block-inner-clr">
+                        <div class="col-md-9 col-sm-9 col-xs-12 footer-copyright-info font-11 vtop" style="padding:0">
+                            <p>Plan du site - Mentions légales - Liens - Accès <br>
+                                Site immobilier partenaire et réalisé par DMaisons Provence - Logiciel Immobilier &#169; Copyright 2011-2017</p>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12 text-left-m text-right-d footer-copyright-logo marg-top10-m ">
+                            <div class="row-col-auto-w text-left-m text-right-d ">
+                                <div class="row-col-auto-w vtop ">
+                                    <img src="img/footer-icon.png" alt="Footer Icon3" />
+                                </div>
+                                <div class="row-col-auto-w text-left">
+                                    <p>Création de site immobilier</p>
+                                    <p>Logiciel immobilier</p>
+                                    <p>Référencement site immobilier</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright Block Ends -->
+        </div>
     </footer>
-    <!-- /footer -->
+    <!-- Footer Section Model2 Ends -->
 
     <!-- footer JS -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/bootstrap-multiselect.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/select2.min"></script>
+    <script src="js/select2.full.min.js"></script>
     <script type="text/javascript">
         // Multiselect
         $('#select-box1-filter, #select-box4-filter').multiselect();

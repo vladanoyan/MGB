@@ -1,3 +1,5 @@
+
+
 /* fonts*/
 @font-face {
     font-family: 'Open Sans';
@@ -34,7 +36,7 @@ button:focus {
     color: #FFF;
     background-image: -moz-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100);
+    background-image: -ms-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100%);
     border: none;
     padding: 0 15px 0 0;
     transition: all 0.5s;
@@ -262,19 +264,22 @@ header .headerSliderArea nav.mainNavbar {
     width: 100%;
 }
 header .headerSliderArea nav.mainNavbar .mainNavbarMenu {
-    width: 100%;
     display: none;
 }
 @media (min-width: 992px) {
     header .headerSliderArea nav.mainNavbar {
-        position: absolute;
-        bottom: 0;
-        z-index: 1;
-        width: 100%;
-        background-image: url(../img/navbarBackground.png);
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    background-image: url(../img/navbarBackground.png);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     }
     header .headerSliderArea nav.mainNavbar .mainNavbarMenu {
-        display: block !important;
+        display: inline-block !important;
     }
 }
 header .headerSliderArea nav.mainNavbar ul {
@@ -292,7 +297,7 @@ header .headerSliderArea nav.mainNavbar ul li a {
     text-transform: uppercase;
     padding: 15px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 18px;
+    font-size: 16px;
     color: #FFF;
     font-weight: 300;
     transition: all 0.5s;
@@ -332,6 +337,7 @@ header .headerSliderArea nav.mainNavbar ul li ul.dropdown-menu li a:hover {
     header .headerSliderArea nav.mainNavbar ul li,
     header .headerSliderArea nav.mainNavbar ul li a {
         display: inline-block;
+        font-size: 16px;
     }
     header .headerSliderArea nav.mainNavbar ul li a {
         padding: 10px 20px;
@@ -391,24 +397,24 @@ div.mainContainer .picturedNavbar .picturedNavbarItem:hover .title {
 .pageSection p {
     text-align: justify;
 }
+
 .pageSection span.requiredText {
     color: #750909;
     font-size: 12px;
 }
 div.mainContainer section {
     float: left;
-    width: 100%;
-    margin-top: 60px;
+    width: 98%;
+    margin-top: 30px;
 }
 div.mainContainer section .sectionTitleArea,
 section.coupsDeCoeur .sectionTitleArea {
     text-align: center;
 }
-div.mainContainer section .sectionTitle,
-section.coupsDeCoeur .sectionTitle {
+ .sectionTitle {
     display: inline-block;
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 300;
     text-transform: uppercase;
     color: #FFF;
@@ -417,6 +423,10 @@ section.coupsDeCoeur .sectionTitle {
     background-image: -webkit-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100%);
 }
+.agency-block-content p{
+    color: black;
+}
+
 section.coupsDeCoeur {
     margin-top: 60px;
     padding: 60px 0 150px 0;
@@ -494,6 +504,12 @@ section.coupsDeCoeur .coupsDeCoeurSlider .coupsDeCoeurSliderItem .adBox {
     background-image: -webkit-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100%);
 }
+.adBox h3,h4{
+font-size:20px;
+}
+.adInformation>.col-xs-6{
+padding: 2px 0px;
+}
 section.coupsDeCoeur .coupsDeCoeurSlider .coupsDeCoeurSliderItem .adBox .adHeader {
     text-align: center;
     color: #FFF;
@@ -501,6 +517,7 @@ section.coupsDeCoeur .coupsDeCoeurSlider .coupsDeCoeurSliderItem .adBox .adHeade
 section.coupsDeCoeur .coupsDeCoeurSlider .coupsDeCoeurSliderItem .adBox .adInformation p {
     color: #FFF;
     margin: 0;
+    font-size: 13px;
 }
 section.coupsDeCoeur .coupsDeCoeurSlider .coupsDeCoeurSliderItem .adBox .adInformation .rightSideInformation {
     text-align: right;
@@ -567,12 +584,17 @@ section .agenceLinks a:hover {
 .filtreArea .formItemBox {
     width: 100%;
     display: block;
-    padding: 0 5px;
+    padding: 0 4px;
 }
 .filtreArea .formItemBoxButton {
     width: auto;
     display: inline-block;
     padding: 0 5px;
+}
+.multiselect-selected-text{
+    max-width: 94%;
+    overflow:hidden;
+    display: inline-block;
 }
 .filtreArea .formItem {
     margin-bottom: 10px;
@@ -582,7 +604,7 @@ section .agenceLinks a:hover {
 }
 .filtreArea .btn-group .multiselect {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 5px;
     text-align: left;
     font-size: 13px;
 }
@@ -662,6 +684,13 @@ section .agenceLinks a:hover {
 .listingSection .listingItem .listingItemCoverImage a {
     display: block;
 }
+@media (max-width: 991px) {
+    .listingSection .listingItem .listingItemInformartion .header{
+    border-radius: 0 0 0 0 !important;  } 
+    .listingSection .listingItem .listingItemCoverImage a.overlayLink{
+    border-radius: 20px 20px 0 0 !important;
+ }
+}
 .listingSection .listingItem .listingItemCoverImage a.overlayLink {
     display: none !important;
     position: absolute;
@@ -681,6 +710,7 @@ section .agenceLinks a:hover {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -732,28 +762,56 @@ section .agenceLinks a:hover {
     float: left;
     width: 100%;
     background: #f6f6f6;
+    border-radius: 20px 0 20px 0;
+    min-height: 350px;
 }
 .listingSection .listingItem .listingItemInformartion .header {
     float: left;
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
     background-image: -moz-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(73,89,112) 0%, rgb(48,47,59) 100%);
+    border-radius: 0 20px 0 0;
+}
+.listingSection .listingItem .listingItemInformartion .header>.col-xs-12 {
+padding-right: 0;
+}
+.listing-item-price-color{
+  font-size: 12px;
+  display: inline-block!important;
+  font-weight: 300;
+
+}
+@media (max-width: 1200px) {
+.lst-img-caption-btm-btns>h2{
+  font-size: 19px;
+}
+}
+.listing-item-price-color::first-letter {
+  text-transform: uppercase !important;
 }
 .listingSection .listingItem .listingItemInformartion .header .headerItem {
     margin: 0;
     color: #FFF;
+    font-size: 16px;
 }
-.listingSection .listingItem .listingItemInformartion .header .bienTypeTitle,
+
 .listingSection .listingItem .listingItemInformartion .header .bienTitle {
     font-weight: 300;
+    font-size: 18px;
+}
+.listingSection .listingItem .listingItemInformartion .header .bienTypeTitle
+ {
+    font-weight: 300;
+    font-size: 16px;
 }
 .listingSection .listingItem .listingItemInformartion .header .bienPrice {
     font-weight: 600;
 }
 .listingSection .listingItem .listingItemInformartion .header .bienID {
     color: #d0d0d0;
+    font-size: 14px!important;
 }
 .listingSection .listingItem .listingItemInformartion .header .headerButtons {
     margin-top: 10px;
@@ -788,13 +846,15 @@ section .agenceLinks a:hover {
 .listingSection .listingItem .listingItemInformartion .body .bienShortDescription p {
     font-size: 13px;
     margin: 0;
+    color: black;
 }
 .listingSection .listingItem .listingItemInformartion .body .bienButtons {
     margin-top: 10px;
 }
+
 .listingSection .listingItem .listingItemInformartion .body .bienButtons button {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     background-color: #FFF;
     border-radius: 50%;
     border: 1px solid #d5d5d5;
@@ -805,20 +865,752 @@ section .agenceLinks a:hover {
     background-position: center;
     transition: all 0.5s;
 }
-.listingSection .listingItem .listingItemInformartion .body .bienButtons button.dButton {
-    background-image: url(../img/icons/dButton.png);
-    position: relative;
+
+/** ********************** DPE GES Block Model3 Starts ******************************!*/
+/*!*-------------------------------------------------------------------------------*!*/
+/*-------------------- DPE GES Block Model3 Content Starts --------*/
+
+
+/* DPE-GES Block General Colors Start */
+.dpe-ges-block-m3 .dpe-ges-blck-txt {
+    color: #505050;
 }
-.listingSection .listingItem .listingItemInformartion .body .bienButtons button.dButton:hover .hover-content {
+.dpe-ges-block-m3 .dpe-ges-graph ul li span {
+    color: #000;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li.selected span {
+    color: #000;
+    font-weight: bold;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li > div:nth-child(1):after {
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 10px solid green;
+    border-left-color: inherit;
+}
+/* DPE-GES Block General Colors End */
+.locimg
+{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #969696;
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    background-image: url("../images/icons/PINTPOINT3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.dpe-ges-block-m3[class*='col-'] {
+    padding-left: 21px;
+    padding-right: 21px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+.dpe-ges-block-m3 div[class*='col-']:nth-child(1) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    text-align: left;
+}
+.dpe-ges-block-m3 > div[class*='col-']:nth-child(1) {
+    margin-left: -0.125em;
+    padding-left: 0;
+    padding-bottom: 10px;
+}
+.dpe-ges-block-m3 div[class*='col-']:nth-child(2) {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    padding-bottom: 10px;
+}
+.dpe-ges-block-m3 .ges-dpe img {
+    height: auto;
+    width: auto;
+    display: inline-block;
+    float: left;
+    padding-right: 2px;
+}
+
+.dpe-ges-block-m3 .dpe-ges-blck-txt {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li {
+    height: 22px;
+    padding-right: 0;
+    margin-bottom: 1px;
+    position: relative;
+    display: block;
+    font-size: 11px;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li div:nth-child(1){
+    height: 100%;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li span {
+    line-height: 10px;
+    font-size: 11px;
+}
+
+.dpe-ges-block-m3 .dpe-ges-graph ul li > div span:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li span:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li > div:nth-child(1):after {
+    content:"";
+    width: 0;
+    height: 0;
+    display: inline-block;
+    position: absolute;
+    left: 100%;
+}
+
+.dpe-ges-block-m3 .dpe-ges-graph ul li > div:nth-child(2) {
+    display: none;
+}
+
+/* Hover Content Li Selected State Starts */
+.dpe-ges-block-m3 .dpe-ges-graph ul li.selected > div:nth-child(2) {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li.selected > div > div > span {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.dpe-ges-block-m3 .dpe-ges-graph ul li.selected div:nth-child(2) {
+    height: 22px;
+    padding-left: 20px;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li.selected div:nth-child(2) div {
+    height: 22px;
+    padding-left: 10px;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li.selected div:nth-child(2) div:before {
+    content:"";
+    width: 0;
+    height: 0;
+    display: inline-block;
+    position: absolute;
+    right: calc(100% - 20px);
+    top: 0;
+}
+/* Hover Content Li Selected State Ends */
+
+/* Visible Content Selected State Starts */
+.dpe-ges-block-m3 .dpe-ges-graph.dpe-ges-graph-selected li{
+    display: none ;
+}
+.dpe-ges-block-m3 .dpe-ges-graph.dpe-ges-graph-selected li.selected {
+    display:block ;
+    height: 35px;
+}
+.dpe-ges-block-m3 .dpe-ges-graph.dpe-ges-graph-selected li.selected div span{
+    left: 10%;
+}
+.dpe-ges-block-m3 .dpe-ges-graph-selected {
+    max-width: 180px;
+}
+/* Visible Content Selected State Ends */
+
+/* Btn Hover Block Starts */
+.dpe-ges-block-m3 .btn-hover-container {
+    position: relative;
+    z-index: 510;
+    padding-bottom: 2px;
+    height: 24px;
+}
+.dpe-ges-block-m3 .hover-content {
+    display: none;
+    padding: 5px;
+    position: absolute;
+    top: 21px;
+    left: 0;
+    z-index: 520;
+    overflow: hidden;
+    width: 190px;
+}
+.dpe-ges-block-m3 .hover-content.pos-obs-right {
+    top: 100%;
+    right: 0;
+    left: auto;
+}
+.dpe-ges-block-m3 .btn-hover-container a:hover {
+    text-decoration: none;
+}
+.dpe-ges-block-m3 .btn-hover-container > header {
+    margin-left: 0.5px;
+}
+.dpe-ges-block-m3 > div:nth-child(2) .btn-hover-container {
+    z-index: 400;
+}
+/* Btn Hover Block Ends */
+
+/*-------------------- DPE GES Block Model3 Content Ends --------*/
+
+/*-------------------- DPE GES Block Model3 Colors Start -----------*/
+/* Btn Hover Block Starts */
+.dpe-ges-block-m3 .hover-content {
+    background-color: #FFF;
+    border: 1px solid #c8c8c8;
+}
+.dpe-ges-block-m3 .btn-hover-container b {
+    color: #505050;
+}
+/* Btn Hover Block Ends */
+
+
+
+/* Hover Content Li Selected State Colors Start */
+.dpe-ges-block-m3 .dpe-ges-graph ul li.selected > div > div > span {
+    color: #FFF;
+}
+/*.dpe-ges-block-m3 .dpe-ges-graph ul li.selected {*/
+/*background-color: #f5f5f5;*/
+/*}*/
+.dpe-ges-block-m3 .dpe-ges-graph ul li.selected div:nth-child(2) div {
+    background-color: #2d2d2d;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li.selected div:nth-child(2) div:before {
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-right: 10px solid #2d2d2d;
+}
+/* Hover Content Li Selected State Ends */
+
+/* Visible Content Selected State */
+.dpe-ges-block-m3 .dpe-ges-graph.dpe-ges-graph-selected ul li > div:nth-child(1):after {
+    border-top: 19px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 12px solid green;
+    border-left-color: inherit;
+}
+
+/*-----------DPE Colors Start--------------*/
+.dpe-ges-block-m3 .dpe-blck .dpe-ges-graph ul li:nth-child(1) > div:nth-child(1) {
+    background-color: #008830;
+    border-color: #008830;
+}
+.dpe-ges-block-m3 .dpe-blck .dpe-ges-graph ul li:nth-child(2) > div:nth-child(1) {
+    background-color: #48a820;
+    border-color: #48a820;
+}
+.dpe-ges-block-m3 .dpe-blck .dpe-ges-graph ul li:nth-child(3) > div:nth-child(1) {
+    background-color: #b0d811;
+    border-color: #b0d811;
+}
+.dpe-ges-block-m3 .dpe-blck .dpe-ges-graph ul li:nth-child(4) > div:nth-child(1) {
+    background-color: #f8f800;
+    border-color: #f8f800;
+}
+.dpe-ges-block-m3 .dpe-blck .dpe-ges-graph ul li:nth-child(5) > div:nth-child(1) {
+    background-color: #b0d811;
+    border-color: #b0d811;
+}
+.dpe-ges-block-m3 .dpe-blck .dpe-ges-graph ul li:nth-child(6) > div:nth-child(1) {
+    background-color: #f84800;
+    border-color: #f84800;
+}
+.dpe-ges-block-m3 .dpe-blck .dpe-ges-graph ul li:nth-child(7) > div:nth-child(1) {
+    background-color: #f80000;
+    border-color: #f80000;
+}
+
+.dpe-ges-block-m3 .dpe-blck .dpe-ges-graph ul li:nth-child(8) > div:nth-child(1) {
+    background-color: #48a820;
+    border-color: #48a820;
+}
+
+.dpe-ges-block-m3 .dpe-blck .dpe-ges-graph ul li:nth-child(9) > div:nth-child(1) {
+    background-color: #48a820;
+    border-color: #48a820;
+
+}
+/* DPE Colors End */
+
+/* GES Colors Start -*/
+.dpe-ges-block-m3 .ges-blck .dpe-ges-graph ul li:nth-child(1) > div:nth-child(1) {
+    background-color: #ebdcf6;
+    border-color: #ebdcf6;
+}
+.dpe-ges-block-m3 .ges-blck .dpe-ges-graph ul li:nth-child(2) > div:nth-child(1) {
+    background-color: #e0c1f8;
+    border-color: #e0c1f8;
+}
+.dpe-ges-block-m3 .ges-blck .dpe-ges-graph ul li:nth-child(3) > div:nth-child(1) {
+    background-color: #d8a8f8;
+    border-color: #d8a8f8;
+}
+.dpe-ges-block-m3 .ges-blck .dpe-ges-graph ul li:nth-child(4) > div:nth-child(1) {
+    background-color: #d096f3;
+    border-color: #d096f3;
+}
+.dpe-ges-block-m3 .ges-blck .dpe-ges-graph ul li:nth-child(5) > div:nth-child(1) {
+    background-color: #b970f2;
+    border-color: #b970f2;
+}
+.dpe-ges-block-m3 .ges-blck .dpe-ges-graph ul li:nth-child(6) > div:nth-child(1) {
+    background-color: #a849ec;
+    border-color: #a849ec;
+}
+.dpe-ges-block-m3 .ges-blck .dpe-ges-graph ul li:nth-child(7) > div:nth-child(1) {
+    background-color: #8813e0;
+    border-color: #8813e0;
+}
+.dpe-ges-block-m3 .ges-blck .dpe-ges-graph ul li:nth-child(8) > div:nth-child(1) {
+    background-color: #ebdcf6;
+    border-color: #ebdcf6;
+}
+.dpe-ges-block-m3 .ges-blck .dpe-ges-graph ul li:nth-child(9) > div:nth-child(1) {
+    background-color: #ebdcf6;
+    border-color: #ebdcf6;
+}
+/* GES Colors End -*/
+
+/*-------------------- DPE GES Block Model3 Colors End -------------*/
+
+/*-------------------- DPE GES Block Model3 Media Queries Start -----*/
+@media (min-width: 480px) {
+    .dpe-ges-block-m3 div[class*='col-']:nth-child(1) {
+        padding-right: 43px;
+    }
+    .dpe-ges-block-m3 div[class*='col-']:nth-child(2) {
+        padding-left: 18px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .dpe-ges-graph ul li span {
+        line-height: 9px;
+        font-size: 10px;
+    }
+}
+@media (min-width: 768px) {
+    .dpe-ges-block-m3[class*='col-'] {
+        padding-left: 0;
+        padding-right: 18px;
+        margin-left: -0.125em;
+        margin-right: -0.125em;
+    }
+}
+
+@media (min-width: 992px){
+    .filter-m4-v1 .filter-content > div:first-child {
+        float: left;
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 992px){
+    #search .filter-block-col1 {
+        float: none!important;
+    }
+
+}
+
+
+
+
+/*-------------------- DPE GES Block Model3 Block Media Queries End --------*/
+
+/********************** DPE GES Block Model3 Ends  ******************************/
+/*------------------------------------------------------------------------------*/
+
+/********************** DPE GES Block Model1 Version1 Ends  *******************************/
+/*----------------------------------------------------------------------------------------*/
+
+.img-ges1 {
+    background: url("../img/icons/icon-DPE.png") no-repeat 10% 75%;
+    background-size: 70%;
+    background-color: #fff;
+}
+.img-ges2 {
+    background: url("../img/icons/icon-GES.png") no-repeat 10% 75%;
+    background-size: 70%;
+    background-color: #fff;
+}
+@media (max-width: 990px){
+    .iconsservise {
+        text-align: center;
+    }
+
+}
+.img-ges1:hover
+{
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+.img-ges2:hover
+{
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+.dpe-ges-block-m1-v1 a.btn-DPE-GES span.btn-label-DPE-GES{
+    position: absolute;
+    right: 9px;
+    font-size: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #505050;
+}
+
+.dpe-ges-block-m1-v1 a {
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #c8c8c8;
+    height: 40px;
+    width: 40px;
+    background-size: 20px 20px;
+    background-position: center;
+    margin-right: 5px;
+    transition: box-shadow .5s;
+}
+
+/********************** DPE GES Block Model1 Version1 Starts  **************************/
+/*-------------------------------------------------------------------------------------*/
+/*-------------------- DPE GES Block Model1 Version1 Content Starts --------*/
+
+.dpe-ges-block-m1-v1  .dpe-ges-graph ul li {
+    height: 22px;
+    padding-right: 0;
+    margin-bottom: 1px;
+    position: relative;
+    display: block;
+    font-size: 11px;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li div:nth-child(1){
+    height: 100%;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li span {
+    line-height: 10px;
+    font-size: 11px;
+}
+.dpe-ges-block-m1-v1 header > span {
+    font-size: 10px;
+}
+
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li > div span:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li span:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li > div:nth-child(1):after {
+    content:"";
+    width: 0;
+    height: 0;
+    display: inline-block;
+    position: absolute;
+    left: 100%;
+}
+
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li > div:nth-child(2) {
+    display: none;
+}
+
+/* Li Selected State Starts */
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li.selected > div:nth-child(2) {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li.selected > div > div > span {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li.selected div:nth-child(2) {
+    height: 22px;
+    padding-left: 20px;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li.selected div:nth-child(2) div {
+    height: 22px;
+    padding-left: 10px;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li.selected div:nth-child(2) div:before {
+    content:"";
+    width: 0;
+    height: 0;
+    display: inline-block;
+    position: absolute;
+    right: calc(100% - 20px);
+    top: 0;
+}
+/* Li Selected State Ends */
+
+/* Btn Hover Block Starts */
+.dpe-ges-block-m1-v1.btn-hover-container {
+    position: relative;
+    z-index: 510;
+    padding-bottom: 1px;
+    display: inline-block;
+    vertical-align: top;
+}
+.dpe-ges-block-m1-v1.btn-hover-container:hover .hover-content {
+    display: block !important;
+}
+.dpe-ges-block-m1-v1 .hover-content {
+    display: none;
+    padding: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 520;
+    /*opacity: 0;*/
+    width: 190px;
+    overflow: hidden;
+}
+.dpe-ges-block-m1-v1 .hover-content.pos-obs-right {
+    top: 100%;
+    right: 0;
+    left: auto;
+}
+/* Btn Hover Block Ends */
+/*-------------------- DPE GES Block Model1 Version1 Content Ends -----------*/
+
+/*-------------------- DPE GES Block Model1 Version1 Colors Start -----------*/
+/* Btn Hover Block */
+.dpe-ges-block-m1-v1 .hover-content {
+    background-color: #FFF;
+    border: 1px solid #c8c8c8;
+}
+
+/* DPE-GES Block General Colors Start */
+.dpe-ges-block-m1-v1 .dpe-ges-blck-txt {
+    color: #505050;
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li span {
+    color: #000;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li.selected span {
+    color: #000;
+    font-weight: bold;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li > div:nth-child(1):after {
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 10px solid green;
+    border-left-color: inherit;
+}
+/* DPE-GES Block General Colors End */
+
+/* Li Selected State Colors Start */
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li.selected > div > div > span {
+    color: #FFF;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li.selected {
+    background-color: #e1e1e1;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li.selected div:nth-child(2) div {
+    background-color: #2d2d2d;
+}
+.dpe-ges-block-m1-v1 .dpe-ges-graph ul li.selected div:nth-child(2) div:before {
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-right: 10px solid #2d2d2d;
+}
+/* Li Selected State Ends */
+
+/* DPE Colors Start */
+.dpe-ges-block-m1-v1 .dpe-blck .dpe-ges-graph ul li:nth-child(1) > div:nth-child(1) {
+    background-color: #008830;
+    border-color: #008830;
+}
+.dpe-ges-block-m1-v1 .dpe-blck .dpe-ges-graph ul li:nth-child(2) > div:nth-child(1) {
+    background-color: #48a820;
+    border-color: #48a820;
+}
+.dpe-ges-block-m1-v1 .dpe-blck .dpe-ges-graph ul li:nth-child(3) > div:nth-child(1) {
+    background-color: #b0d811;
+    border-color: #b0d811;
+}
+.dpe-ges-block-m1-v1 .dpe-blck .dpe-ges-graph ul li:nth-child(4) > div:nth-child(1) {
+    background-color: #f8f800;
+    border-color: #f8f800;
+}
+.dpe-ges-block-m1-v1 .dpe-blck .dpe-ges-graph ul li:nth-child(5) > div:nth-child(1) {
+    background-color: #f8b000;
+    border-color: #f8b000;
+}
+.dpe-ges-block-m1-v1 .dpe-blck .dpe-ges-graph ul li:nth-child(6) > div:nth-child(1) {
+    background-color: #f84800;
+    border-color: #f84800;
+}
+.dpe-ges-block-m1-v1 .dpe-blck .dpe-ges-graph ul li:nth-child(7) > div:nth-child(1) {
+    background-color: #f80000;
+    border-color: #f80000;
+}
+/* DPE Colors End */
+
+/* GES Colors Start -*/
+.dpe-ges-block-m1-v1 .ges-blck .dpe-ges-graph ul li:nth-child(1) > div:nth-child(1) {
+    background-color: #ebdcf6;
+    border-color: #ebdcf6;
+}
+.dpe-ges-block-m1-v1 .ges-blck .dpe-ges-graph ul li:nth-child(2) > div:nth-child(1) {
+    background-color: #e0c1f8;
+    border-color: #e0c1f8;
+}
+.dpe-ges-block-m1-v1 .ges-blck .dpe-ges-graph ul li:nth-child(3) > div:nth-child(1) {
+    background-color: #d8a8f8;
+    border-color: #d8a8f8;
+}
+.dpe-ges-block-m1-v1 .ges-blck .dpe-ges-graph ul li:nth-child(4) > div:nth-child(1) {
+    background-color: #d096f3;
+    border-color: #d096f3;
+}
+.dpe-ges-block-m1-v1 .ges-blck .dpe-ges-graph ul li:nth-child(5) > div:nth-child(1) {
+    background-color: #b970f2;
+    border-color: #b970f2;
+}
+.dpe-ges-block-m1-v1 .ges-blck .dpe-ges-graph ul li:nth-child(6) > div:nth-child(1) {
+    background-color: #a849ec;
+    border-color: #a849ec;
+}
+.dpe-ges-block-m1-v1 .ges-blck .dpe-ges-graph ul li:nth-child(7) > div:nth-child(1) {
+    background-color: #8813e0;
+    border-color: #8813e0;
+}
+/* GES Colors End -*/
+
+/*-------------------- DPE GES Block Model1 Version1 Colors End -------------*/
+/*-------------------- DPE GES Block Model1 Version1 Colors End -------------*/
+
+
+ .dpe-block-cover.no-selected,
+ .dpe-block-cover.inprogress,
+ .ges-block-cover.no-selected,
+ .ges-block-cover.inprogress,
+ .dpe-block-cover.no-selected,
+ .dpe-block-cover.inprogress,
+ .ges-block-cover.no-selected,
+ .ges-block-cover.inprogress
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+}
+
+.dpe-ges-block-m1-v1 .hover-content .dpe-block div.no-selected {
+    background: url("../img/icons/no-dpe.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m1-v1 .hover-content  .ges-block div.inprogress {
+    background: url("../img/icons/ges-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m1-v1 .hover-content .dpe-block div.inprogress {
+    background: url("../img/icons/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m1-v1 .hover-content .ges-block div.no-selected {
+    background: url("../img/no-ges.png")no-repeat center rgba(245,245,245, 0.5);
+}
+
+/** For Vlad */
+
+.for-dpe div.no-selected {
+    background: url("../img/icons/no-dpe.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.for-ges div.inprogress {
+    background: url("../img/icons/ges-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.for-dpe div.inprogress {
+    background: url("../img/icons/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.for-ges div.no-selected {
+    background: url("../img/no-ges.png")no-repeat center rgba(245,245,245, 0.5);
+}
+
+
+.dpe-ges-block-m3 .dpe-blck .hover-content div.no-selected {
+    background: url("../img/icons/no-dpe.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .dpe-blck .hover-content div.inprogress {
+    background: url("../img/icons/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .ges-blck .hover-content div.no-selected {
+    background: url("../img/icons/no-ges.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .ges-blck .hover-content div.inprogress {
+    background: url("../img/icons/ges-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
+.dpe-ges-block-m1-v2 .ges-block .dpe-block-cover div.inprogress {
+    background: url("../img/icons/ges-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
+.dpe-ges-block-m1-v2 .dpe-block .dpe-block-cover.inprogress {
+    background: url("../img/icons/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
+
+/*-------------------- DPE GES Block Model1 Version1 Media Queries Start -----*/
+@media (min-width:768px) and (max-width:991px) {
+    .dpe-ges-block-m1-v1 .dpe-ges-graph ul li span {
+        line-height: 9px;
+        font-size: 10px;
+    }
+}
+@media (min-width:768px) {
+    .dpe-ges-block-m1-v1 .hover-content.pos-obs-right-d {
+        top: 100%;
+        right: 0;
+        left: auto;
+    }
+    .dpe-ges-block-m1-v1.btn-hover-container.pos-static-d {
+        position: static;
+    }
+}
+
+/*-------------------- DPE GES Block Model1 Version1 Media Queries End --------*/
+
+.img-ges1:hover .hover-content {
     display: block;
 }
-.listingSection .listingItem .listingItemInformartion .body .bienButtons button.cButton {
-    background-image: url(../img/icons/cButton.png);
-    position: relative;
-}
-.listingSection .listingItem .listingItemInformartion .body .bienButtons button.cButton:hover .hover-content {
+.img-ges2:hover .hover-content {
     display: block;
 }
+
 .listingSection .listingItem .listingItemInformartion .body .bienButtons button.markerButton {
     background-image: url(../img/icons/markerIcon.png);
 }
@@ -828,8 +1620,7 @@ section .agenceLinks a:hover {
 .listingSection .listingItem .listingItemInformartion .body .bienButtons button.calcButton {
     background-image: url(../img/icons/calcIcon.png);
 }
-.listingSection .listingItem .listingItemInformartion .body .bienButtons .hover-content,
-.ficheSection .ficheItem .ficheItemInformartion .body .dpe-gesArea .content {
+.hover-content {
     display: none;
     cursor: default;
     width: 180px;
@@ -848,6 +1639,7 @@ section .agenceLinks a:hover {
     backface-visibility: visible !important;
     -webkit-animation-name: flipInX;
     animation-name: flipInX;
+    overflow: hidden;
 }
 .ficheSection .ficheItem .ficheItemInformartion .body .dpe-gesArea .content {
     position: relative;
@@ -858,7 +1650,7 @@ section .agenceLinks a:hover {
 @media (min-width: 768px) {
     .ficheSection .ficheItem .ficheItemInformartion .body .dpe-gesArea .content {
         display: inline-block;
-        width: 180px;
+        width: 188px;
         margin-right: 20px;
         position: relative;
     }
@@ -1076,6 +1868,48 @@ section .agenceLinks a:hover {
 /* Li Selected State Ends */
 
 /*-------------------- Listing Item DPE GES Block Content Ends --------*/
+
+/*-------------------- DPE GES Block Model1 Version1 Colors End -------------*/
+
+
+ .dpe-block-cover.no-selected,
+ .dpe-block-cover.inprogress,
+ .ges-block-cover.no-selected,
+ .ges-block-cover.inprogress,
+ .dpe-block-cover.no-selected,
+ .dpe-block-cover.inprogress,
+ .ges-block-cover.no-selected,
+ .ges-block-cover.inprogress
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+}
+
+
+
+.dpe-ges-block-m3 .dpe-blck .hover-content div.no-selected {
+    background: url("../img/icons/no-dpe.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .dpe-blck .hover-content div.inprogress {
+    background: url("../img/icons/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .ges-blck .hover-content div.no-selected {
+    background: url("../img/icons/no-ges.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .ges-blck .hover-content div.inprogress {
+    background: url("../img/icons/ges-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
+.dpe-ges-block-m1-v2 .ges-block .dpe-block-cover div.inprogress {
+    background: url("../img/icons/ges-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
+.dpe-ges-block-m1-v2 .dpe-block .dpe-block-cover.inprogress {
+    background: url("../img/icons/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
 
 /*-------------------- Listing Item DPE GES Block Colors Start -----------*/
 
@@ -1333,64 +2167,122 @@ section .agenceLinks a:hover {
     margin-left: auto;
     margin-right: auto;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal {
+.modal .modal-content .msg{
+    color: #555;
+    padding:25px;
+}
+ .modal {
     margin-top: 50px;
     text-align: center;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal .modal-dialog {
+ .modal .modal-dialog {
     padding-top: 50px;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal .modal-content {
+ .modal .modal-content {
     float: left;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal .modalHeaderSection .agencyLogo {
+ .modal .modalHeaderSection .agencyLogo {
     position: absolute;
     float: left;
     width: 100%;
     top: -70px;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal .bienHeader {
-    margin-top: 20px;
-    padding-bottom: 10px;
+ .modal .bienHeader {
+    padding: 30px 0;
     border-bottom: 1px solid #d0d0d0;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal .bienHeader .bienTypeTitle,
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal .bienHeader .bienTitle {
+ .modal .bienHeader .bienTypeTitle,
+ .modal .bienHeader .bienTitle {
     margin: 0;
+    font-size: 15px;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal .bienHeader .bienPrice {
+.modal .bienHeader .bienPrice {
     margin-top: 10px;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal .bienHeader .bienID {
+.modal .bienHeader .bienID {
     color: #d0d0d0;
     text-align: center;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal .modalHeaderSection .coverImage {
+ .modal .modalHeaderSection .coverImage {
     width: 100%;
+    max-height: 380px;
+    object-fit: cover;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal form {
-    padding: 40px;
+ .modal form {
+    padding:14px;
     float: left;
     width: 100%;
     background: #FFF;
 }
-.listingSection .listingItem .listingItemInformartion .body .contactAgencySection .modal form button {
+ .modal form button {
     margin: 0;
     float: none;
 }
+.modal-dialog{
+    max-width: 800px;
+    width: 87%;
+    margin: 120px auto;
+}
+
+.modal-hover
+{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 90px;
+    font-size: 13px;
+    
+}
+
+ .modalHeaderSection{
+    position: relative;
+ }
+.listing-item-parameters ul li {
+    padding-left: 10px;
+    vertical-align: top;
+    display: inline-block;
+    color: #fff;
+    width: 32%;
+    text-align: left;
+}
+.listing-item-parameters{
+    padding: 17px 0;
+}
+
+.listing-item-parameters>ul {
+    list-style-type: none;
+    vertical-align: top;
+    max-height: 70px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 1150px){
+.listing-item-parameters ul li {
+    width: 47%;
+    text-align: center;
+     }
+ }
+@media (max-width: 620px){
+.listing-item-parameters ul li {
+    width: 90%;
+     }
+ }
+
 @media (min-width: 768px) {
     .listingSection .listingItem .listingItemInformartion .body .bienShortDescription p {
         height: 90px;
-        overflow-y: scroll;
-    }
+       overflow-y: auto;
+   }
     .listingSection .listingItem .listingItemInformartion .body .bienDetails {
         margin: 0;
         border-radius: 0 0 20px 20px;
     }
     .listingSection .listingItem .listingItemInformartion .body .bienDetails ul {
         height: 130px;
-        overflow-y: scroll;
-    }
+       overflow-y: auto;
+   }
     .listingSection .listingItem .listingItemInformartion .body .contactAgencySection {
         flex-wrap: nowrap;
     }
@@ -1403,6 +2295,7 @@ section .agenceLinks a:hover {
     }
     .listingSection .listingItem .listingItemInformartion .body .contactAgencySection .contactAgencySectionTitleSection p {
         text-align: left;
+        color: black;
     }
     .listingSection .listingItem .listingItemInformartion .body .contactAgencySection .contactAgencyButton button {
         float: right;
@@ -1412,7 +2305,7 @@ section .agenceLinks a:hover {
     .listingSection .listingItem .leftChild {
         padding-left: 0;
         padding-right: 0;
-        z-index: 10;
+        z-index: 0;
     }
     .listingSection .listingItem .rightChild {
         padding-left: 0;
@@ -1442,18 +2335,234 @@ section .agenceLinks a:hover {
         background-size: 20px 20px;
     }
 }
+.listingSection .listingItem .listingItemInformartion .body .bienButtons button:hover 
+{
+    box-shadow:2px 2px 2px rgba(0, 0, 0, 0.6);
+}
 @media (min-width: 1200px) {
     .listingSection .listingItem .listingItemInformartion .body .bienShortDescription p {
         height: 75px;
-        overflow-y: scroll;
+        overflow-y: auto;
+        color: black;
     }
     .listingSection .listingItem .listingItemInformartion .body .bienDetails ul {
         height: 90px;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 }
+.back-section{
+    padding: 20px 10px;
+}
+ .close {
+     position: absolute;
+    top: -36px;
+    right: -26px;
+    font-size: 47px;
+    color: #fff !important;
+    opacity: 1 !important;
+    font-weight: 300;
+    z-index: 999;
+}
+.lightboxOverlay{
+    max-width: 100%;
+}
+.lb-dataContainer{
+    position: absolute;
+    top: 40px;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+}
+.lb-outerContainer{
+    top: 20px;
+}
+.lightbox .lb-image{
+    position: relative;
+}
+.lst-itm-dtl-header-txt1 {
+    text-align: justify;
+    margin: 0;
+}
 /* /listing */
+/********************** Listing Sort Model1 Starts *****************************************/
+/*-----------------------------------------------------------------------------------------*/
+/*-------------------- Listing Sort Model1 Content Starts --------------------------*/
+.listing-sort-m1 .lst-sort-block div[class*='col-'] {
+    padding-left: 18px;
 
+}
+.listing-sort-m1 .lst-sort-block h2 {
+    font-size: 1.3em;
+    text-transform: capitalize;
+}
+.listing-sort-m1 .lst-sort-block select {
+    max-width:230px;
+    display: inline-block!important;
+}
+
+.listing-sort-m1 header.lst-sort-txt-container[class*='col-'] {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.listing-sort-m1 div.lst-sort-input-container[class*='col-'] {
+    padding-right: 18px;
+    padding-left: 18px;
+}
+
+.listing-sort-m1 div.lst-sort-input-container > div:nth-child(1)[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.listing-sort-m1 div.toggle-button-container[class*='col-'] {
+    padding-right: calc(7% + 22px);
+    padding-left: calc(7% + 22px);
+}
+.listing-sort-m1 a {
+    margin-left: 0;
+}
+.listing-sort-m1 div.lst-sort-input-container[class*='col-'] {
+    padding-right: 21px;
+}
+.listing-sort-m1 header.lst-sort-txt-container[class*='col-'] {
+    padding-left: 14px;
+}
+.listing-sort-m1 div.lst-sort-input-container > div[class*='col-']:nth-child(2) {
+    padding-left: 0;
+    width: 100%;
+    text-align: left;
+}
+.listing-sort-m1 div.lst-sort-input-container > div[class*='col-']:nth-child(1) {
+    padding-right: 12px;
+}
+/*-------------------- Listing Sort Model1 Content Ends --------------------------*/
+
+
+
+/*-------------------- Listing Sort Model1 Colors Start -------------------------*/
+.hvr-shadow-effect2:hover, .hvr-shadow-effect2:focus, .active.hvr-shadow-effect2
+{
+    -webkit-box-shadow: inset 0 0 0 #aeb1b5, 0 4px 8px #1e2021;
+    -moz-box-shadow:inset 0 0 0 #aeb1b5, 0 4px 8px #1e2021;
+    -ms-box-shadow: inset 0 0 0 #aeb1b5, 0 4px 8px #1e2021;
+    -o-box-shadow: inset 0 0 0 #aeb1b5, 0 4px 8px #1e2021;
+    box-shadow:inset 0 0 0 #aeb1b5, 0 4px 8px #1e2021;
+}
+.fa-align-justify
+{
+    color: #948c8c;
+
+}
+.btn-sort-clr
+{
+    padding: 16px 19px;
+    background-color: #fff;
+    margin-right: 0;
+    position: relative;
+    border-radius: 9px;
+    vertical-align: middle;
+}
+.fa-sort-desc{
+    color: #948c8c;
+    font-size: 25px !important;
+    position: absolute;
+    top: 8px;
+    right: 11px;
+}
+.fa-sort-asc
+{
+    color: #948c8c;
+    font-size: 25px !important;
+    position: absolute;
+    top: -2px;
+    right: 11px;
+}
+#lst-sort-control
+{
+    border-radius:5!important;
+}
+.listing-sort-m1 .lst-sort-block-bg {
+    background-color:  #445166;
+    border-radius: 10px;
+    
+}
+.listing-sort-m1 a.btn-link-clr {
+    background-color: #fff;
+    color: #ffffff;
+    border-radius: 6px;
+}
+.listing-sort-m1 a.btn-link-clr1 {
+    background-color: #fff;
+    color: #948c8c;
+    border-radius:6px;
+}
+.listing-sort-m1 h2 {
+    color: #fff;
+    margin: 16px 0;
+    font-weight: 700;
+}
+#listing-sort
+{
+    margin: 55px 0;
+}
+
+/*-------------------- Listing Sort Model1 Colors End ---------------------------*/
+
+/*-------------------- Listing Sort Model1 Media Queries Start -----------------*/
+@media (min-width:480px) {
+    .listing-sort-m1 div.lst-sort-input-container > div[class*='col-']:nth-child(2) {
+        width: auto;
+    }
+}
+@media (max-width:760px) {
+   .cnt{
+        text-align: center!important;    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .listing-sort-m1 div.lst-sort-input-container[class*='col-'] {
+        padding-right: 27px;
+    }
+
+    /* Listing Sort Model1 Library */
+    .text-left-m-d-md {
+        text-align: left;
+    }
+}
+@media (min-width: 768px) {
+    .listing-sort-m1 div.lst-sort-txt-container[class*='col-'] {
+        padding-left: 10px;
+        margin-right: 5px;
+    }
+    .listing-sort-m1 .lst-sort-block h2 {
+        font-size: 1.6em;
+        text-transform: capitalize;
+        color: #fff;
+    }
+}
+@media (min-width: 992px) {
+
+    .listing-sort-m1 div.toggle-button-container[class*='col-'] {
+        padding-right: 22px;
+        padding-left: 18px;
+    }
+    .listing-sort-m1 div.lst-sort-input-container[class*='col-'] {
+        padding-left: 9px;
+    }
+
+    .listing-sort-m1 a {
+        margin-left: 6px;
+    }
+
+    /* Listing Sort Model1 Library */
+    .text-left-m-d-md {
+        text-align: inherit;
+    }
+}
+
+/*-------------------- Listing Sort Model1 Media Queries End -----------------*/
+/********************** Listing Sort Model1 Ends *******************************************/
 /* fiche-bien */
 .ficheSection .ficheItem {
     overflow: hidden;
@@ -1474,6 +2583,7 @@ section .agenceLinks a:hover {
 .ficheSection .ficheItem .ficheItemInformartion .header .bienTypeTitle,
 .ficheSection .ficheItem .ficheItemInformartion .header .bienTitle {
     font-weight: 300;
+    font-size: 18px;
 }
 .ficheSection .ficheItem .ficheItemInformartion .header .bienPrice {
     font-weight: 600;
@@ -1523,7 +2633,7 @@ section .agenceLinks a:hover {
     display: none;
     align-items: center;
     justify-content: center;
-    background: rgba(48, 47, 59, 0.7);
+    background: rgba(99, 91, 123, 0.28);
     -webkit-animation-duration: 0.8s;
     animation-duration: 0.8s;
     -webkit-animation-fill-mode: both;
@@ -1536,8 +2646,14 @@ section .agenceLinks a:hover {
     display: flex;
 }
 .ficheSection .ficheItem .ficheItemInformartion .ficheItemCoverImage .overlay i {
-    font-size: 50px;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 45px;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 1px;
+    left: 16px;
+    background-color: #676565;
+    padding: 2px 30px;
+    border-radius: 17px;
 }
 .ficheSection .ficheItem .ficheItemInformartion .ficheItemCoverImage .owl-nav div  {
     position: absolute;
@@ -1548,7 +2664,7 @@ section .agenceLinks a:hover {
 }
 .ficheSection .ficheItem .ficheItemInformartion .ficheItemCoverImage .owl-nav i  {
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 1);
 }
 .ficheSection .ficheItem .ficheItemInformartion .ficheItemCoverImage .owl-nav div:hover i  {
     color: #FFF;
@@ -1568,7 +2684,6 @@ section .agenceLinks a:hover {
 .ficheSection .ficheItem .ficheItemInformartion .ficheItemCoverImageNav {
     float: left;
     width: 100%;
-    padding: 0 10px;
     background: #272727;
 }
 .ficheSection .ficheItem .ficheItemInformartion .ficheItemCoverImageNav img {
@@ -1590,9 +2705,11 @@ section .agenceLinks a:hover {
 .ficheSection .ficheItem .ficheItemInformartion .body .bienShortDescription {
     float: left;
     padding: 20px 10px 10px 10px;
+    width: 100%;
 }
 .ficheSection .ficheItem .ficheItemInformartion .body .bienShortDescription p {
     margin: 0;
+    color: black;
 }
 .ficheSection .ficheItem .ficheItemInformartion .body .bienButtons {
     margin-top: 20px;
@@ -1647,6 +2764,7 @@ section .agenceLinks a:hover {
 }
 .ficheSection .contactAgency .agencyHeaderSection p {
     text-align: center;
+    color: black;
 }
 .ficheSection .contactAgency .formButton {
     margin-top: 0;
@@ -1704,8 +2822,8 @@ form .formLabel p {
     margin: 0;
 }
 form .formItem {
-    padding-left: 5px;
-    padding-right: 5px;
+    position: relative;
+    padding: 0;
     margin-bottom: 10px;
 }
 form .formSectionTitle {
@@ -1826,125 +2944,442 @@ form textarea {
     form .subFormButtonArea .button {
         margin-bottom: 20px;
     }
+    .pagination a{
+            padding: 6px 8px;
+    }
 }
+@media (max-width: 450px) {
+     .pagination a{
+            float: right;
+    }
+    .sectionTitle{
+        font-size: 21px!important;
+    }
+}
+
 /* /forms */
 
-/* footer */
-footer {
-    background: #000;
+
+/********************** Form Error Model1  Starts  ****************************/
+/*----------------------------------------------------------------------------*/
+/*-------------------- Form Error Block Content Starts ----------------*/
+.form-error-blck {
+    display: none;
 }
-footer .siteMap {
-    background: #1d1d1d;
+ .form-error-blck {
+    display: inline-block;
+    z-index: 170;
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
 }
-footer .siteMap ul {
+/* This is for fixing form error icon positioning problem when
+the drop down is opened above and the form tooltip  is under it */
+.form-error.form-error-m1 .form-error-blck.form-error-blck-pos-fix {
+    z-index: 110;
+}
+.form-error.form-error-m1 .error-btn i {
+    font-size: 15px;
+    height: 15px;
+    line-height: 15px;
+}
+.form-error.form-error-m1 .error-btn + .tooltip {
+    z-index: 150;
+}
+
+.form-error.form-error-m1 .form-error-blck.search-form-error-blck {
+    right: 4%;
+}
+.form-error-blck>a
+{
+  color: #761518;
+}
+/*-------------------- Form Error Block Content Ends ----------------*/
+
+/*-------------------- Form Error Block Colors Start ----------------*/
+.form-border-rect .form-error.form-error-m1 input,
+.form-border-rect .form-error.form-error-m1 select,
+.form-border-rect .form-error.form-error-m1 textarea,
+.form-border-rect .form-error.form-error-m1 .custom-multiselect-btn,
+.form-border-rect .form-error.form-error-m1 .select2-selection--single,
+.form-border-rect .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+.form-border-rect .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--above .select2-selection--single {
+    border: 1px solid #cd1711;
+}
+
+.form-border-rounded .form-error.form-error-m1 input,
+.form-border-rounded .form-error.form-error-m1 select,
+.form-border-rounded .form-error.form-error-m1 textarea,
+.form-border-rounded .form-error.form-error-m1 .custom-multiselect-btn,
+.form-border-rounded .form-error.form-error-m1 .select2-selection--single,
+.form-border-rounded .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+.form-border-rounded .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--above .select2-selection--single {
+    border: 1px solid #cd1711;
+}
+
+.form-no-border .form-error.form-error-m1 input,
+.form-no-border .form-error.form-error-m1 select,
+.form-no-border .form-error.form-error-m1 textarea,
+.form-no-border .form-error.form-error-m1 .custom-multiselect-btn,
+.form-no-border .form-error.form-error-m1 .select2-selection--single,
+.form-no-border .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+.form-no-border .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--above .select2-selection--single {
+    border: 1px solid #cd1711;
+}
+
+.form-no-border-rect .form-error.form-error-m1 input,
+.form-no-border-rect .form-error.form-error-m1 select,
+.form-no-border-rect .form-error.form-error-m1 textarea,
+.form-no-border-rect .form-error.form-error-m1 .custom-multiselect-btn,
+.form-no-border-rect .form-error.form-error-m1 .select2-selection--single,
+.form-no-border-rect .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+.form-no-border-rect .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--above .select2-selection--single {
+    border: 1px solid #cd1711;
+}
+
+.form-no-border-rounded .form-error.form-error-m1 input,
+.form-no-border-rounded .form-error.form-error-m1 select,
+.form-no-border-rounded .form-error.form-error-m1 textarea,
+.form-no-border-rounded .form-error.form-error-m1 .custom-multiselect-btn,
+.form-no-border-rounded .form-error.form-error-m1 .select2-selection--single,
+.form-no-border-rounded .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+.form-no-border-rounded .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--above .select2-selection--single {
+    border: 1px solid #cd1711;
+}
+
+.form-border-btm .form-error.form-error-m1 input,
+.form-border-btm .form-error.form-error-m1 select,
+.form-border-btm .form-error.form-error-m1 textarea,
+.form-border-btm .form-error.form-error-m1 .custom-multiselect-btn,
+.form-border-btm .form-error.form-error-m1 .select2-selection--single,
+.form-border-btm .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+.form-border-btm .form-error.form-error-m1 .select2-container--default.select2-container--open.select2-container--above .select2-selection--single {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #cd1711;
+}
+
+.formItem .error-btn i,
+.form-error.form-error-m1 .error-btn i {
+    color: #cd1711;
+}
+.formItem .error-btn + .tooltip > .tooltip-inner,no-selected
+.form-error.form-error-m1 .error-btn + .tooltip > .tooltip-inner {
+    background-color: #cd1711;
+    max-width: 250px;
+    width: 500px;
+    padding: 5px;
+}
+.formItem .error-btn + .tooltip.top .tooltip-arrow,
+.form-error.form-error-m1 .error-btn + .tooltip.top .tooltip-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-top-color: #cd1711;
+    border-width: 5px 5px 0;
+}
+/*-------------------- Form Error Block Colors End ----------------*/
+
+/*-------------------- Form Error Block Media Queries Start -------*/
+@media (min-width: 480px)  and (max-width: 600px){
+  .form-error-blck.search-form-error-blck {
+        right: 7%;
+    }
+}
+@media (min-width: 601px)  and (max-width: 768px){
+ .form-error-blck.search-form-error-blck {
+        right: 8%;
+    }
+}
+
+@media (min-width: 992px) {
+ .form-error-blck.search-form-error-blck {
+        right: -20px;
+    }
+}
+/*-------------------- Form Error Block Media Queries End -------*/
+/********************** Form Error Model1 Ends  ****************************/
+/*-------------------------------------------------------------------------*/
+
+/*-------------------- Footer Model2 Content Starts -------------------*/
+/*--- Footer General Styles Start ---*/
+.backlight
+{
+    background-color: rgba(45, 52, 60, 0.051);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+body>footer.footer-m2 {
+    padding: 0;
+}
+.footer-m2 p {
     margin: 0;
     padding: 0;
-    list-style: none;
+}
+span#elem_foot_link a{
+        font-size: 14px;
+        color:#333;
+    }
+/*--- Footer General Styles End ---*/
+
+/*--- Footer Top Links Start ---*/
+#footer
+{ background-color: #000;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 300px;
+    vertical-align: top;
+}
+.footer-m2 .footer-top-links ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+.footer-m2 .footer-top-links li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.footer-m2 .footer-top-links li span {
+    display: none;
+    color: #e5e5e5;
+}
+.footer-m2 .footer-top-links li a {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #fff;
+}
+/*--- Footer Top Links End ---*/
+
+/*--- Footer Contacts-Partners Block Starts ---*/
+.footer-m2 .footer-contacts-partners {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.footer-m2 .footer-contacts {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 1px;
+    padding-right: 0;
+}
+.footer-m2 .footer-partners {
+    line-height: 46px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.footer-m2 .footer-partners div:nth-child(2) {
+    padding-left: 5px;
+}
+/*--- Footer Contacts-Partners Block Ends ---*/
+
+/*--- Footer Bottom Links Start ---*/
+.footer-m2 .footer-btm-links {
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+.footer-m2 .footer-btm-links li {
+    padding: 0 15px 0 0;
+    float: left;
+    vertical-align: top;
+    line-height: 12px;
+    padding-top: 2px;
+}
+.footer-m2 .footer-btm-links a {
+    font-size: 11px;
+    text-decoration: none;
+}
+.footer-m2 .footer-btm-links a:hover,
+.footer-m2 .footer-btm-links a:focus {
+    text-decoration: underline;
+}
+/*--- Footer Bottom Links End ---*/
+
+/*--- Footer Copyright Block Starts ---*/
+.footer-m2 .footer-copyright-block {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footer-m2 .footer-copyright-info {
+    padding-left: 1px;
+    padding-right: 0;
+}
+
+.footer-m2 .footer-copyright-logo {
+
+    padding-left: 2px;
+    padding-right: 0;
+
+}
+.footer-m2 .footer-copyright-block .footer-copyright-logo p {
+    font-size: 9px;
+    line-height: 10px;
+}
+.footer-m2 .footer-copyright-block .footer-copyright-logo div:nth-child(1) {
+    padding-right: 3px;
+    display: inline-flex;
+}
+.footer-m2 .footer-copyright-block .footer-copyright-logo div:nth-child(2) {
+    padding-left: 3px;
+    text-align: left;
+}
+/*--- Footer Copyright Block Ends ---*/
+
+/*-------------------- Footer Model2 Content Ends --------------------*/
+
+/*-------------------- Footer Model2 Colors Start --------------------*/
+/*--- Footer General Colors Start ---*/
+body>footer.footer-m2 {
+    padding: 0;
+
+}
+.footer-m2 .footer-top-links-bg {
+    background-color: transparent;
+    margin:0;
+}
+.footer-m2 .footer-contacts-partners-bg,
+.footer-m2 .footer-btm-links-bg,
+.footer-m2 .footer-copyright-block-bg {
+    margin-bottom: 17px;
+}
+.footer-copyright-block-bg>.row-inner{
+    padding:0;
+}
+
+.footer-m2 a,p {
+    color: #fff;
+}
+/*--- Footer General Colors End ---*/
+
+/* Footer Top Links Colors */
+.footer-m2 .footer-top-links-clr,
+.footer-m2 .footer-top-links-clr  a {
+    width: 100%;
+    color: #FFF;
+    background-color: #1d1d1d;
     text-align: center;
 }
-footer .siteMap ul li,
-footer .siteMap ul a {
-    display: inline-block;
+
+/*--- Footer Bottom Links Colors Start ---*/
+.footer-m2 .footer-btm-links a {
+    color: #646464;
+    text-decoration: none;
 }
-footer .siteMap ul a {
-    color: #FFF;
-    padding: 10px 5px;
-    text-transform: uppercase;
-    font-size: 9px;
+.footer-m2 .footer-btm-links a:hover,
+.footer-m2 .footer-btm-links a:focus {
+    color: #646464;
 }
-footer .siteMap ul a:hover {
-    text-decoration: underline;
-}
-footer .footerBase {
-    color: #FFF;
-}
-footer .footerBase .row {
-    margin: 40px 0;
-}
-footer .footerBase .companyTitleLink {
-    color: #FFF;
-}
-footer .footerBase .companyTitleLink:hover {
-    text-decoration: underline;
-}
-footer .footerBase .companyTitle {
-    margin: 0;
-}
-footer .footerBase .companySubTitle {
-    color: #FFF;
-    font-size: 13px;
-}
-footer .footerBase .locationTags {
-    margin: 10px 0;
-    padding: 15px 0;
-    border-top: 1px solid #46556a;
-    border-bottom: 1px solid #46556a;
-    list-style: none;
-}
-footer .footerBase .locationTags ul li {
-    display: inline-block;
-}
-footer .footerBase .locationTags ul li a {
-    display: inline-block;
-    color: #FFF;
-    font-size: 11px;
-    margin-right: 30px;
-}
-footer .footerBase .locationTags ul li a:hover {
-    text-decoration: underline;
-}
-footer .footerBase p {
-    margin: 0;
-    color: #a0a0a0;
-    font-size: 10px;
-}
-footer .footerBase .footerCopyright a {
-    color: #FFF;
-}
-footer .footerBase .footerCopyright a:hover {
-    text-decoration: underline;
-}
-footer .footerBase .footerCopyrightDmaisons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-footer .footerBase .footerCopyrightDmaisons img {
-    width: 100px;
-    margin-right: 15px;
-}
-footer .footerBase .footerCopyrightDmaisons p {
-    font-size: 8px
-}
-@media (max-width: 768px) {
-    footer .footerBase .footerCopyrightDmaisons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 20px;
-    }
-    footer .footerBase .contactAgenceButtonArea {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0 10px;
-    }
-}
+/*--- Footer Bottom Links Colors End ---*/
+
+/*-------------------- Footer Model2 Colors End ----------------------*/
+
+/*-------------------- Footer Model2 Media Queries Start -------------*/
 @media (min-width: 768px) {
-    footer .siteMap ul a {
-        padding: 20px 5px;
+    /*--- Footer Top Links Block Starts ---*/
+    .footer-m2 .footer-top-links li {
+        display: inline-block;
     }
-    footer .siteMap ul li+li:before {
-      content: "|";
-      color: #616161;
+    .footer-m2 .footer-top-links li span {
+        display: inline;
     }
-    footer .footerBase .contactAgenceButton {
-        float: right;
+    /*--- Footer Top Links Block Ends ---*/
+
+    /*--- Footer Contacts-Partners Block Starts ---*/
+    .footer-m2 .footer-contacts {
+        padding-right: 9px;
     }
+    .footer-m2 .footer-partners {
+        padding-left: 9px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+    }
+
+
+    /*--- Footer Contacts-Partners Block Ends ---*/
+
+    /*--- Footer Copyright Block Starts ---*/
+    .footer-m2 .footer-copyright-info {
+        padding-right: 9px;
+    }
+    .footer-m2 .footer-copyright-logo {
+        padding-left: 9px;
+        padding-right: 18px;
+
+    }
+    /*--- Footer Copyright Block Ends ---*/
 }
-@media (min-width: 992px) {
-    footer .siteMap ul a {
-        padding: 20px 10px;
-        font-size: 11px;
-    }
+.phone{
+    font-weight: 300;
+    font-size: 15px;
+    font-family: "Roboto Light";
+    color: black;
 }
-/* /footer */
+
+.buttonCall {
+    background-image: -moz-linear-gradient( 90deg, rgb(89,130,2) 0%, rgb(104,148,10) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(89,130,2) 0%, rgb(104,148,10) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(89,130,2) 0%, rgb(104,148,10) 100%);
+    box-shadow: inset 0 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #FFF;
+    width: 164px;
+    height: 33px;
+    font-size: 14px;
+    font-family: 'Roboto';
+    line-height: 1.714;
+    border: none;
+    margin-top: 14px;
+    border-radius: 20px;
+}
+
+.buttonCall:hover{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+.buttonCall:hover>.fa-phone
+{
+    transform: rotate(320deg);
+}
+.circle
+{
+    margin-right: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 2px 4px;
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
+
+}
+.adress
+{
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+.Villeneuve{
+    font-size: 11px;
+    line-height: 17px;
+    font-weight: 300;
+}
+
+/*-------------------- Footer Model2 Media Queries End --------------*/
